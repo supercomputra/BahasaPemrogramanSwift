@@ -1,6 +1,5 @@
 # Pedoman Dasar Bahasa Pemrograman Swift
-*Halaman ini disadur dari halaman resmi komunitas Swift.org*
-
+*Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org*
 
 Diluncurkan pada tahun 2014, bahasa pemrograman Swift dengan sangat cepat telah menjadi salah satu bahasa yang sangat berkembang di dalam sejarah bahasa pemograman. Ini dikarenakan Swift memberikan kemudahan dalam menulis perangkat lunak yang tidak hanya cepat namun juga aman secara perancangan. Tujuan dibuatnya bahasa ini cukup ambisius yaitu dengan Swift semua orang dapat melakukan pemrograman yang sederhana menjadi mudah and hal yang rumit menjadi memungkinkan.
 
@@ -19,10 +18,15 @@ Swift mendapatkan manfaat langsung dari puluhan tahun pengembangan ilmu komputer
 *Tools* ada bagian yang sangat penting pada ekosistem Swift. Kami akan terus berusaha kersa untuk mengintegrasikan dengan baik dalam hal peralatan pengembang, *build time* yang lebih cepat, alat diagnosa yang baik, dan juga memberikan pengalaman pengembangan yang interaktif. *Tools* dapat memberikan manfaat yang banyak pada proses pengembangan perangkat lunak, seperti *playground* yang berbasis Swift pada Xcode, atau sebuah REPL berbasi web yang dapat bekerja dengan kode dari server berbasis Linux.
 
 ### Fitur-fitur
+
 ### Penerjemahan Dokumentasi Berbahasa Indonesia dan *Open Source*
+
 ### Dukungan *Platform*
+
 #### *Platform-Platform* dari Apple
+
 #### Linux
+
 #### *Platform-Platform* Baru
 
 ## Memulai
@@ -201,10 +205,88 @@ Apple Swift version 2.2-dev (LLVM ..., Clang ..., Swift ...)
 *Flag* `-dev` yang disematkan pada nomor versi digunakan untuk mengindikasikan bahwa bahasa yang anda gunakan adalah sebuah *development build* dan bukanlah versi yang sudah rilis.
 
 ### Penggunaan REPL
+
 ### Penggunaan LLDB Debugger
 
 ## Dokumentasi
 ### Bahasa Pemrograman Swift
+
+#### Dasar-dasar
+
+#### Operator Dasar
+
+#### String dan Karakter
+
+#### Koleksi
+
+#### Kontrol Alur
+
+#### Fungsi
+
+#### Pengakhiran
+
+#### Pencacahan
+
+#### Struct dan Class
+
+#### Properti
+
+#### Metode
+
+#### Subskrip
+
+#### Pewarisan
+
+#### Inisialisasi
+
+#### Deinisialisasi
+
+#### Perantaian Opsional
+
+#### Penanganan *Error*
+
+#### *Type Casting*
+
+#### *Nested Types*
+
+#### Ekstensi
+
+#### Protokol
+
+#### Generik
+
+#### *Opaque Types*
+
+#### Penghitung Referensi Otomatis
+
+#### Keamanan Memori
+
+#### Kontrol Akses
+
+#### Operator-operator Lanjutan
+
+### Referensi Bahasa
+
+#### Struktur Leksikal
+
+#### Tipe
+
+#### Ekspresi
+
+#### Pernyataan
+
+#### Deklarasi
+
+#### Atribut
+
+#### Pola
+
+#### Parameter Generik dan Argumen
+
+#### Ringkasan Tatabahasa
+
 ### *Swift Package Manager*
+
 ### Pedoman Perancangan API
+
 ### Pedoman Migrasi
