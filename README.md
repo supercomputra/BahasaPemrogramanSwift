@@ -1,4 +1,4 @@
-# Pedoman Dasar Bahasa Pemrograman Swift
+# Bahasa Pemrograman Swift
 *Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org*
 
 Diluncurkan pada tahun 2014, bahasa pemrograman Swift dengan sangat cepat telah menjadi salah satu bahasa yang sangat berkembang di dalam sejarah bahasa pemograman. Ini dikarenakan Swift memberikan kemudahan dalam menulis perangkat lunak yang tidak hanya cepat namun juga aman secara perancangan. Tujuan dibuatnya bahasa ini cukup ambisius yaitu dengan Swift semua orang dapat melakukan pemrograman yang sederhana menjadi mudah and hal yang rumit menjadi memungkinkan.
