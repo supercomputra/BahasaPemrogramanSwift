@@ -8,17 +8,8 @@ _Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org_
   - [Fitur](#fitur)
   - [Penerjemahan Dokumentasi Berbahasa Indonesia dan _Open Source_](#penerjemahan-dokumentasi-berbahasa-indonesia-dan--open-source-)
   - [Dukungan _Platform_](#dukungan--platform-)
-    - [_Platform_ dari Apple](#-platform--dari-apple)
-    - [Linux](#linux)
-    - [_Platform_ Baru](#-platform--baru)
-- [Memulai](#memulai)
+- [Perkenalan](#perkenalan)
   - [Pemasangan Swift](#pemasangan-swift)
-    - [Pemasangan Pada Sistem Operasi macOS](#pemasangan-pada-sistem-operasi-macos)
-    - [Pemasangan Pada Sistem Operasi Linux](#pemasangan-pada-sistem-operasi-linux)
-    - [Pemasangan Pada Sistem Operasi Windows](#pemasangan-pada-sistem-operasi-windows)
-      - [Visual Studio dan Swift](#visual-studio-dan-swift)
-      - [Berkas-berkas Pendukung](#berkas-berkas-pendukung)
-      - [Versi Swift](#versi-swift)
   - [Penggunaan REPL](#penggunaan-repl)
   - [Penggunaan LLDB Debugger](#penggunaan-lldb-debugger)
 - [Dokumentasi](#dokumentasi)
@@ -28,22 +19,13 @@ _Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org_
   - [Pedoman Migrasi](#pedoman-migrasi)
 - [Pedoman Penggunaan](#pedoman-penggunaan)
   - [Dasar](#dasar)
-    - [Konstan dan Variabel](#konstan-dan-variabel)
-      - [Deklarasi](#deklarasi)
-      - [Tipe Anotasi](#tipe-anotasi)
-      - [Penamaan Konstan dan Variabel](#penamaan-konstan-dan-variabel)
-      - [Pencetakan Konstan dan Variabel](#pencetakan-konstan-dan-variabel)
-    - [Komentar](#komentar)
-    - [Titik Koma](#titik-koma)
-    - [Bilangan](#bilangan)
-    - [Bilangan Berkoma](#bilangan-berkoma)
   - [Operator Dasar](#operator-dasar)
   - [String dan Karakter](#string-dan-karakter)
   - [Koleksi](#koleksi)
   - [Kontrol Alur](#kontrol-alur)
   - [Fungsi](#fungsi)
   - [Pengakhiran](#pengakhiran)
-  - [Pencacahan](#pencacahan)
+  - [Enumerasi](#enumerasi)
   - [Struct dan Class](#struct-dan-class)
   - [Properti](#properti)
   - [Metode](#metode)
@@ -53,16 +35,16 @@ _Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org_
   - [Deinisialisasi](#deinisialisasi)
   - [Perantaian Opsional](#perantaian-opsional)
   - [Penanganan _Error_](#penanganan--error-)
-  - [_Type Casting_](#-type-casting-)
-  - [_Nested Types_](#-nested-types-)
+  - [Peleburan Tipe Data](#peleburan-tipe-data)
+  - [Tipe Data Terbenam](#tipe-data-terbenam)
   - [Ekstensi](#ekstensi)
   - [Protokol](#protokol)
   - [Generik](#generik)
-  - [_Opaque Types_](#-opaque-types-)
+  - [Tipe Data Gamblang](#tipe-data-gamblang)
   - [Penghitung Referensi Otomatis](#penghitung-referensi-otomatis)
-  - [Keamanan Memori](#keamanan-memori)
+  - [Keamanan Pada Memori](#keamanan-pada-memori)
   - [Kontrol Akses](#kontrol-akses)
-  - [Operator-operator Lanjutan](#operator-operator-lanjutan)
+  - [Operator Lanjutan](#operator-lanjutan)
 - [Referensi Bahasa](#referensi-bahasa)
   - [Struktur Leksikal](#struktur-leksikal)
   - [Tipe](#tipe)
@@ -105,7 +87,7 @@ Tujuan dari proyek Swift dibuat adalah untuk memberikan bahasa pemrograman terba
 
 #### _Platform_ Baru
 
-## Memulai
+## Perkenalan
 
 Disini kita anda akan menemukan informasi tentang bagaimana cara menggunakan bahasa pemrograman Swift. Jika Swift adalah bahasa pemrograman yang baru untuk anda, maka anda bisa mengunjungi [_A Swift Tour_](https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1) terlebih dahulu untuk pengenalan singkat pada konsep-konsep dan fitur-fitur yang penting pada bahasa ini.
 
@@ -387,7 +369,7 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ### Pengakhiran
 
-### Pencacahan
+### Enumerasi
 
 ### Struct dan Class
 
@@ -407,9 +389,9 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ### Penanganan _Error_
 
-### _Type Casting_
+### Peleburan Tipe Data
 
-### _Nested Types_
+### Tipe Data Terbenam
 
 ### Ekstensi
 
@@ -421,17 +403,17 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ### Penghitung Referensi Otomatis
 
-### Keamanan Memori
+### Keamanan Pada Memori
 
 ### Kontrol Akses
 
-### Operator-operator Lanjutan
+### Operator Lanjutan
 
 ## Referensi Bahasa
 
 ### Struktur Leksikal
 
-### Tipe
+### Tipe Data Gamblang
 
 ### Ekspresi
 
