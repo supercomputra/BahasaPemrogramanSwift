@@ -211,82 +211,83 @@ Apple Swift version 2.2-dev (LLVM ..., Clang ..., Swift ...)
 ## Dokumentasi
 ### Bahasa Pemrograman Swift
 
-#### Dasar-dasar
-
-#### Operator Dasar
-
-#### String dan Karakter
-
-#### Koleksi
-
-#### Kontrol Alur
-
-#### Fungsi
-
-#### Pengakhiran
-
-#### Pencacahan
-
-#### Struct dan Class
-
-#### Properti
-
-#### Metode
-
-#### Subskrip
-
-#### Pewarisan
-
-#### Inisialisasi
-
-#### Deinisialisasi
-
-#### Perantaian Opsional
-
-#### Penanganan *Error*
-
-#### *Type Casting*
-
-#### *Nested Types*
-
-#### Ekstensi
-
-#### Protokol
-
-#### Generik
-
-#### *Opaque Types*
-
-#### Penghitung Referensi Otomatis
-
-#### Keamanan Memori
-
-#### Kontrol Akses
-
-#### Operator-operator Lanjutan
-
-### Referensi Bahasa
-
-#### Struktur Leksikal
-
-#### Tipe
-
-#### Ekspresi
-
-#### Pernyataan
-
-#### Deklarasi
-
-#### Atribut
-
-#### Pola
-
-#### Parameter Generik dan Argumen
-
-#### Ringkasan Tatabahasa
-
 ### *Swift Package Manager*
 
 ### Pedoman Perancangan API
 
 ### Pedoman Migrasi
+
+## Pedoman Penggunaan
+### Dasar-dasar
+
+### Operator Dasar
+
+### String dan Karakter
+
+### Koleksi
+
+### Kontrol Alur
+
+### Fungsi
+
+### Pengakhiran
+
+### Pencacahan
+
+### Struct dan Class
+
+### Properti
+
+### Metode
+
+### Subskrip
+
+### Pewarisan
+
+### Inisialisasi
+
+### Deinisialisasi
+
+### Perantaian Opsional
+
+### Penanganan *Error*
+
+### *Type Casting*
+
+### *Nested Types*
+
+### Ekstensi
+
+### Protokol
+
+### Generik
+
+### *Opaque Types*
+
+### Penghitung Referensi Otomatis
+
+### Keamanan Memori
+
+### Kontrol Akses
+
+### Operator-operator Lanjutan
+
+## Referensi Bahasa
+
+### Struktur Leksikal
+
+### Tipe
+
+### Ekspresi
+
+### Pernyataan
+
+### Deklarasi
+
+### Atribut
+
+### Pola
+
+### Parameter Generik dan Argumen
+
+### Ringkasan Tatabahasa
