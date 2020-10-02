@@ -2,6 +2,78 @@
 
 _Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org_
 
+## Daftar Isi
+
+- [Tentang Swift](#tentang-swift)
+  - [Fitur](#fitur)
+  - [Penerjemahan Dokumentasi Berbahasa Indonesia dan _Open Source_](#penerjemahan-dokumentasi-berbahasa-indonesia-dan--open-source-)
+  - [Dukungan _Platform_](#dukungan--platform-)
+    - [_Platform_ dari Apple](#-platform--dari-apple)
+    - [Linux](#linux)
+    - [_Platform_ Baru](#-platform--baru)
+- [Memulai](#memulai)
+  - [Pemasangan Swift](#pemasangan-swift)
+    - [Pemasangan Pada Sistem Operasi macOS](#pemasangan-pada-sistem-operasi-macos)
+    - [Pemasangan Pada Sistem Operasi Linux](#pemasangan-pada-sistem-operasi-linux)
+    - [Pemasangan Pada Sistem Operasi Windows](#pemasangan-pada-sistem-operasi-windows)
+      - [Visual Studio dan Swift](#visual-studio-dan-swift)
+      - [Berkas-berkas Pendukung](#berkas-berkas-pendukung)
+      - [Versi Swift](#versi-swift)
+  - [Penggunaan REPL](#penggunaan-repl)
+  - [Penggunaan LLDB Debugger](#penggunaan-lldb-debugger)
+- [Dokumentasi](#dokumentasi)
+  - [Bahasa Pemrograman Swift](#bahasa-pemrograman-swift)
+  - [_Swift Package Manager_](#-swift-package-manager-)
+  - [Pedoman Perancangan API](#pedoman-perancangan-api)
+  - [Pedoman Migrasi](#pedoman-migrasi)
+- [Pedoman Penggunaan](#pedoman-penggunaan)
+  - [Dasar](#dasar)
+    - [Konstan dan Variabel](#konstan-dan-variabel)
+      - [Deklarasi](#deklarasi)
+      - [Tipe Anotasi](#tipe-anotasi)
+      - [Penamaan Konstan dan Variabel](#penamaan-konstan-dan-variabel)
+      - [Pencetakan Konstan dan Variabel](#pencetakan-konstan-dan-variabel)
+    - [Komentar](#komentar)
+    - [Titik Koma](#titik-koma)
+    - [Bilangan](#bilangan)
+    - [Bilangan Berkoma](#bilangan-berkoma)
+  - [Operator Dasar](#operator-dasar)
+  - [String dan Karakter](#string-dan-karakter)
+  - [Koleksi](#koleksi)
+  - [Kontrol Alur](#kontrol-alur)
+  - [Fungsi](#fungsi)
+  - [Pengakhiran](#pengakhiran)
+  - [Pencacahan](#pencacahan)
+  - [Struct dan Class](#struct-dan-class)
+  - [Properti](#properti)
+  - [Metode](#metode)
+  - [Subskrip](#subskrip)
+  - [Pewarisan](#pewarisan)
+  - [Inisialisasi](#inisialisasi)
+  - [Deinisialisasi](#deinisialisasi)
+  - [Perantaian Opsional](#perantaian-opsional)
+  - [Penanganan _Error_](#penanganan--error-)
+  - [_Type Casting_](#-type-casting-)
+  - [_Nested Types_](#-nested-types-)
+  - [Ekstensi](#ekstensi)
+  - [Protokol](#protokol)
+  - [Generik](#generik)
+  - [_Opaque Types_](#-opaque-types-)
+  - [Penghitung Referensi Otomatis](#penghitung-referensi-otomatis)
+  - [Keamanan Memori](#keamanan-memori)
+  - [Kontrol Akses](#kontrol-akses)
+  - [Operator-operator Lanjutan](#operator-operator-lanjutan)
+- [Referensi Bahasa](#referensi-bahasa)
+  - [Struktur Leksikal](#struktur-leksikal)
+  - [Tipe](#tipe)
+  - [Ekspresi](#ekspresi)
+  - [Pernyataan](#pernyataan)
+  - [Deklarasi](#deklarasi-1)
+  - [Atribut](#atribut)
+  - [Pola](#pola)
+  - [Parameter Generik dan Argumen](#parameter-generik-dan-argumen)
+  - [Ringkasan Tatabahasa](#ringkasan-tatabahasa)
+
 Diluncurkan pada tahun 2014, bahasa pemrograman Swift telah menjadi salah satu bahasa yang sangat berkembang pesat di dalam sejarah bahasa pemograman. Ini dikarenakan Swift memberikan kemudahan dalam menulis perangkat lunak yang tidak hanya cepat namun juga aman secara perancangan. Tujuan dibuatnya bahasa ini cukup ambisius yaitu dengan Swift diharapkan semua orang dapat melakukan pemrograman sederhana yang jauh lebh mudah and hal yang rumit menjadi memungkinkan.
 
 Untuk kalangan pelajar atau mahasiswa, mempelajari Swift dapat mejadi pengenalan yang sangat baik untuk mengenali praktik-praktik yang baik dan konsep pemrograman yang moderen. Dan juga karena bahasa ini terbuka — sehingga semua orang dapat berkontribusi pada pengembangannya - kemampuan dalam memahami bahasa Swift ini bahkan juga dapat diterapkan pada _platform_ yang lebih luas, mulai dari perangkat _mobile_, _desktop_, dan juga pada teknologi komputasi awan.
@@ -288,6 +360,20 @@ var x = 0.0, y = 0.0, z = 0.0
 
 > **Catatan**  
 > Jika nilai yang tersimpan dalam kode anda tidak akan berubah, selalu gunakan `let` untek mendeklaraskian sebuah nilai sebagai konstan. Gunakan variabel hanya untuk menyimpan nilai yang dapat berubah sewaktu-waktu.
+
+##### Tipe Anotasi
+
+##### Penamaan Konstan dan Variabel
+
+##### Pencetakan Konstan dan Variabel
+
+#### Komentar
+
+#### Titik Koma
+
+#### Bilangan
+
+#### Bilangan Berkoma
 
 ### Operator Dasar
 
