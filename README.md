@@ -114,6 +114,99 @@ Sebuah target yang ditulis menggunakan Swift versi 5.3 dapat menggunakan depende
 
 ## Perkenalan
 
+Tradisi pemrograman selalu dimulai dengan program pertama yang dapat mencetak kata-kata seperti _"Hello, World!_ pada laya. Dalam Swift, ini dapat dilakukan cukup dengan satu baris sederhana:
+
+```swift
+print("Hello, world!")
+// Cetak "Hello, world!"
+```
+
+Jika anda pernah menulis kode dalam bahasa C atau Objective-C, sintaksis ini akan terlihat familiar bagi anda. Namun di dalam Swift, satu baris kode ini adalah satu program utuh. Anda tidak perlu melakukan _import_ _library_ lain untuk kemampuan masukan/keluaran untuk memproses tipe string. Kode yang telah ditulis pada cakupan global digunakan sebagai titik masuk dari program yang anda buat sehingga anda tidak membutuhkan sebuah fungsi `main()`. Anda juga tidak perlu menulis titik koma pada setiap kali mengakhiri pernyataan.
+
+Perkenalan ini akan memberikan anda informasi dasar tentang bagaimana memulai menulis kode Swift dengan cara memperlihatkan anda bagaimana cara mencapai berbagai tugas-tugas lazim yang ada pada dunia pemrograman. Jangan kahwatir jika anda menemui sesuatu yang anda tidak pahami, segala hal yang diperkenalkan disini akan dijelaskan dengan detail pada bab berikutnya.
+
+> Catatan  
+> Untuk pengalaman yang terbaik, anda disarankan untuk membuka bab ini sebagai _playground_ di Xcode anda. _Playgrounds_ memungkinkan anda untuk menyunting setiap baris kode dan melihat hasilnya secara instan.  
+> [Unduh _Playground_](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.playground.zip)
+
+## Nilai-nilai Sederhana
+
+Anda dapat menggunakan `let` untuk membuat sebuah konstan dan `var` untuk membuat sebuah variabel. Nilai dari sebuah konstan tidak perlu diketahui pada masa kompilasi, walaupun demikian, anda harus memberikan nilai setidaknya sekali pada sebuah nilai yang bersifat konstan. Hal ini berarti anda dapat menggunakan beberapa konstan untuk menamai nilai yang tidak berubah dan banyak digunakan di berbagai tempat.
+
+```swift
+var myVariable = 41
+myVariable = 50
+let myConstant = 42
+```
+
+Sebuah konstan atau vaiabel harus memiliki tipe yang sema dengan nilai yang anda ingin tetapkan. Walaupun demikian, anda tidak selalu harus menulis tipe secara eksplisit. Dengan memberikan sebuah nilai pada saat anda membuat sebuah konstan atau vaiable akan memberitahu kompilator untuk menentukan sendiri tipe dari nilai tersebut. Dalam contoh di atas kompilator akan menentukan bahwa `myVariable` memiliki tipe `Int` atau _integer_ karena nilai awal dari variabel tersebut adalah suatu bilangan.
+
+Jka nilai awal tidak memberikan informasi yang cukup atau apabila suatu nilai tidak memiliki nilai awal anda dapat menetapkan tipe dengan menulisnya setelah variabel yang dipisahkan oleh tanda titik dua.
+
+```swift
+let implicitInteger = 70
+let implicitDouble = 70.0
+let explicitDouble: Double = 70
+```
+
+> Eksperimen  
+> Cobalah untuk menghilangkan fungsi untuk mengubah nilai menjadi `String` pada baris terakhir. _Error_ apakah yang anda dapatkan?
+
+Sebuah nilai dapat pula disematkan pada `String` dengan cara yang lebih sederhana. Anda dapat menulis tanda kurung yang disertai dengan tanda garis miring terbalik sebelum tanda kurung pembuka. Contohnya:
+
+```swift
+let apples = 3
+let oranges = 5
+let appleSummary = "I have \(apples) apples."
+let fruitSummary = "I have \(apples + oranges) pieces of fruit."
+```
+
+> Eksperimen  
+> Cobalah gunakan \() untuk menyematkan nilai berupa kalkulasi bilangan berkoma di dalam sebuah `String`. Anda juga dapat mencoba menyematkan nama seseorang di dalam sebuah kalimat sapaan.
+
+Anda dapat menggunakan tiga buah tanda kutip ganda (""") untuk `String`yang ditulis dengan dalam beberapa baris. Indentasi yang ada pada setiap awal baris yang dibubuhi tanda kutip akan dihapus apabila sesuai dengan indentasi dari tanda kutip penutup. Contohnya:
+
+```swift
+let quotation = """
+I said "I have \(apples) apples."
+And then I said "I have \(apples + oranges) pieces of fruit."
+"""
+```
+
+Anda dapat membuat _array_ dan _dictionary_ menggunakan tanda kurung siku ([]) dan mengakses elemennya dengan cara menulis indeks atau kata kuncinya di dalam tanda kurung siku. Tanda koma pada akhir elemen dapat ditulis ataupun tidak.
+
+```swift
+var shoppingList = ["catfish", "water", "tulips"]
+shoppingList[1] = "bottle of water"
+
+var occupations = [
+    "Malcolm": "Captain",
+    "Kaylee": "Mechanic",
+]
+occupations["Jayne"] = "Public Relations"
+```
+
+Sebuah _array_ akan secara otomatis mengembang dan meningkatkan kapasitasnya seiring anda menambahkan elemen-elemen ke dalamnya.
+
+```swift
+shoppingList.append("blue paint")
+print(shoppingList)
+```
+
+Untuk membuat sebuah _array_ atau _dictionary_ kosong, anda dapat menggunakan sintaksis untuk inisialisasi.
+
+```swift
+let emptyArray = [String]()
+let emptyDictionary = [String: Float]()
+```
+
+Apabila informasi tipa dapat ditentukan sendirinya oleh kompilator maka anda dapat menulis _array_ kosong sebagai `[]` dan _dictionary_ kosong sebagai `[:]`. Contohnya ketika anda menetapkan sebuah nilai baru untuk sebuah variabel atau memberikan sebuah argumen pada suatu fungsi.
+
+```swift
+shoppingList = []
+occupations = [:]
+```
+
 ### Pemasangan Swift
 
 Langkah pertama dalam menggunakan Swift adalah dengan mengunduh dan memasang _compiler_ dan komponen-komponen lain yang dibutuhkan. Anda dapat [\*mengunduh](https://swift.org/download) dan mengikuti instruksi sesuai dengan target _platform_ anda.
