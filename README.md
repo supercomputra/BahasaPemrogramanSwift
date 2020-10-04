@@ -3,9 +3,6 @@ Terjemahan bahasa Indonesia dari tutorial resmi Apple "The Swift Programming Lan
 
 [Dokumen Asli](https://docs.swift.org/swift-book/)
 
-Ini adalah repositori dari halaman https://supercomputra.com/bahasapemrogramanswift.  
-
-
 ## Menjalankan Program
 Program ini debuat dengan menggunakan pustaka `Publish`. Anda dapat memasang `publish` _command_ pada komputer anda dengan cara:
 ```
@@ -17,6 +14,8 @@ perintah di atas akan memasang `publish` pada komputer anda. Setelah itu anda da
 ```
 $ publish run
 ```
+anda dapat mengakses halaman pada _port_ 8000.
+
 ## Versi
 Perbaharuan untuk Swift 5.3
 
