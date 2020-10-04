@@ -79,7 +79,7 @@ Perkenalan ini akan memberikan anda informasi dasar tentang bagaimana memulai me
 > Untuk pengalaman yang terbaik, anda disarankan untuk membuka bab ini sebagai _playground_ di Xcode anda. _Playgrounds_ memungkinkan anda untuk menyunting setiap baris kode dan melihat hasilnya secara instan.  
 > [Unduh _Playground_](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.playground.zip)
 
-## Nilai-nilai Sederhana
+### Nilai-nilai Sederhana
 
 Anda dapat menggunakan `let` untuk membuat sebuah konstan dan `var` untuk membuat sebuah variabel. Nilai dari sebuah konstan tidak perlu diketahui pada masa kompilasi, walaupun demikian, anda harus memberikan nilai setidaknya sekali pada sebuah nilai yang bersifat konstan. Hal ini berarti anda dapat menggunakan beberapa konstan untuk menamai nilai yang tidak berubah dan banyak digunakan di berbagai tempat.
 
@@ -156,6 +156,131 @@ Apabila informasi tipa dapat ditentukan sendirinya oleh kompilator maka anda dap
 shoppingList = []
 occupations = [:]
 ```
+
+### Alur Kontrol
+
+Anda dapat menggunakan `if` dan `switch` untuk penulisan pernyataan kondisional. Selain itu anda juga dapat menggunakan `for-in`, `while`, dan `repeat-while` untuk menulis pernyataan pengulangan. Jika ingin, anda juga dapat membubuhkan tanda kurung diantara pernyataan kondisi atau variabel yang mengulang. Tanda kurung kurawal `{}` dibutuhkan untuk dibubuhkan di antara isi dari pernyataan pengulangan.
+
+```swift
+let individualScores = [75, 43, 103, 87, 12]
+var teamScore = 0
+for score in individualScores {
+    if score > 50 {
+        teamScore += 3
+    } else {
+        teamScore += 1
+    }
+}
+print(teamScore)
+// "11" tercetak
+```
+
+Di dalam sebuah peryataan yang diawali dengan sintaksis `if`, suatu kondisi harus memiliki ekspresi yang bersifat _boolean_. Hal ini berarti suatu kode seperti `if score { ... }` adalah sebuah kesalahan karena bukan merupakan komparasi implisit terhadap nol (0).
+
+Anda dapat menggunakan `if` dan `let` sekaligus untuk menangani nilai yang mungkin bisa hilang. Nilai-nilai ini di dalam Swift direpresentasikan sebagai opsional. Sebuah nilai opsional dapat memiliki nilai atau `nil` untuk menunjukan suatu ketiadaan nilai. Tulislah tanda tanya (?) setelah menulis tipe dari nilai tersebut untuk menandai suatu nilai sebagai opsional.
+
+```swift
+var optionalString: String? = "Hello"
+print(optionalString == nil)
+// Mencetak "false"
+
+var optionalName: String? = "John Appleseed"
+var greeting = "Hello!"
+if let name = optionalName {
+    greeting = "Hello, \(name)"
+}
+```
+
+> Eksperimen  
+> Gantilah `optionalName` menjadi `nil`. Apakah nilai `greeting` yang anda dapatkan? Tambahkan sebuah klausa `else` yang memberikan nilai `greeting` berbeda apabila `optionalName` memiliki nilai `nil`
+
+Apabila nila optional adalah `nil`, kondisi menjadi `false` dan blok kode yang ada di dalam kurung kurawal akan dilewati. Sebaliknya, nilai opsional menjadi terbuka dan ditetapkan kepada konstan yang dinyatakan setelah `let` yang membuat nilai tersebut dapat dipakai di dalam blok kode di dalamnya.
+
+Cara lain untuk menggunakan nilai opsional adalah dengan membubuhkan nilai lazim menggunakan operator `??`. Ini memungkinkan apabila nilai optional adalah `nil` nilai lazim tersebuh dapat digunakan.
+
+```swift
+let nickname: String? = nil
+let fullName: String = "John Appleseed"
+let informalGreeting = "Hi \(nickname ?? fullName)"
+```
+
+Sintaksis `switch` dapat digunakan dengan tipe data apapun dan bermacam operasi komparasi. Dengan kata lain penggunaanya tidak terbatas pada bilangan dan pengujian terhadap kesamaan.
+
+```swift
+let vegetable = "red pepper"
+switch vegetable {
+case "celery":
+    print("Add some raisins and make ants on a log.")
+case "cucumber", "watercress":
+    print("That would make a good tea sandwich.")
+case let x where x.hasSuffix("pepper"):
+    print("Is it a spicy \(x)?")
+default:
+    print("Everything tastes good in soup.")
+}
+// Mencetak "Is it a spicy red pepper?"
+```
+
+> Eksperimen  
+> Cobalah hapus kasus didalam blok kode `default`. Kesalahan apakah yang anda dapatkan?
+
+Anda dapat melihat dari potongan kode di atas bagimana `let` dapat digunakan di dalam pernyataan berbasis `switch`.
+
+Setelah mengeksekusi kode di dalam suatu kondisi yang sesuai dengan yang dinyatakan oleh pernyataan `switch` program tersebut akan keluar dari pernyataan `switch` di atas. Eksekusi kemudian tidak akan berlanjut ke kasus berikutnya sehingga tidak dibutuhkan suatu pernyataan `break` secara eksplisit di dalam setiap kasus.
+
+Anda dapat menggunakan `for-in` untuk mengiterasi masing-masing isi yang ada di dalam suatu _dictionary_ dengan cara membubuhkan sepasang nama-nama untuk digunakan pada setiap pasangan kata kunci dan nilai yang tersemat didalamnya. _Dictionary_ adalah sebuah keleksi tak berurut, akibatnya nilai-nilai dan kata-kata kunci yang ada didalamnya akan diiterasi dalam urutan yang dapat berubah-ubah.
+
+```swift
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for (kind, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+print(largest)
+// Prints "25"
+```
+
+> Eksperimen  
+> Cobalah tambahkan variabel lain untuk tetap melacak jenis dari nilai yang mana yang merupakan nilai terbesar dan juga untuk mengetahui apakah jenis angka tersebut sebelumnya.
+
+Anda dapat menggunakan `while` untuk mengulang sebuah blok kode hingga suatu kondisi tertentu berubah. Kondisi dari suatu pengulangan bisa ditulis di akhir, ini akan menjadikan blok kode dari pengulangan yang anda tulis akan dijalankan setidaknya sekali.
+
+```swift
+var n = 2
+while n < 100 {
+    n *= 2
+}
+print(n)
+// Prints "128"
+
+var m = 2
+repeat {
+    m *= 2
+} while m < 100
+print(m)
+// Prints "128"
+```
+
+Anda dapat menyimpan indeks di dalam sebuah pengulanagn dengan menggunakan `..<` untuk membuat suatu rentangan deret indeks.
+
+```swift
+var total = 0
+for i in 0..<4 {
+    total += i
+}
+print(total)
+// Prints "6"
+```
+
+Anda dapat menggunakan `..<` untuk membuat sebuah sebuah rentangan yang menghilangkan nilai atasnya dan menggunakan `...` untuk membuat rentangan yang menyertakan nilai bawah dan juga atasnya. 
 
 ### Pemasangan Swift
 
