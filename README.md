@@ -35,12 +35,12 @@ _Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org_
   - [Deinisialisasi](#deinisialisasi)
   - [Perantaian Opsional](#perantaian-opsional)
   - [Penanganan _Error_](#penanganan--error-)
-  - [Peleburan Tipe Data](#peleburan-tipe-data)
-  - [Tipe Data Terbenam](#tipe-data-terbenam)
+  - [Perubahan Tipe](#perubahan-tipe)
+  - [Tipe Terbenam](#tipe-terbenam)
   - [Ekstensi](#ekstensi)
   - [Protokol](#protokol)
   - [Generik](#generik)
-  - [Tipe Data Gamblang](#tipe-data-gamblang)
+  - [Tipe Gamblang](#tipe-gamblang)
   - [Penghitung Referensi Otomatis](#penghitung-referensi-otomatis)
   - [Keamanan Pada Memori](#keamanan-pada-memori)
   - [Kontrol Akses](#kontrol-akses)
@@ -389,9 +389,9 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ### Penanganan _Error_
 
-### Peleburan Tipe Data
+### Perubahan Tipe
 
-### Tipe Data Terbenam
+### Tipe Terbenam
 
 ### Ekstensi
 
@@ -399,7 +399,7 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ### Generik
 
-### _Opaque Types_
+### Tipe Gamblang
 
 ### Penghitung Referensi Otomatis
 
