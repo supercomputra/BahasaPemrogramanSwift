@@ -3,7 +3,7 @@ Terjemahan bahasa Indonesia dari tutorial resmi Apple "The Swift Programming Lan
 
 [Dokumen Asli](https://docs.swift.org/swift-book/)
 
-Ini adalah repositori dari halaman https://supercomputra/bahasapemrogramanswift.  
+Ini adalah repositori dari halaman https://supercomputra.com/bahasapemrogramanswift.  
 
 ## Versi
 Perbaharuan untuk Swift 5.3
