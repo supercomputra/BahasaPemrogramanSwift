@@ -1,6 +1,6 @@
 # Bahasa Pemrograman Swift
 
-_Halaman ini disadur dari halaman resmi komunitas https://docs.swift.org_
+_Halaman ini dirangkum dan disadur dari halaman resmi komunitas https://docs.swift.org_ dan https://docs.swift.org/swift-book/
 
 ## Daftar Isi
 
@@ -280,7 +280,7 @@ print(total)
 // Prints "6"
 ```
 
-Anda dapat menggunakan `..<` untuk membuat sebuah sebuah rentangan yang menghilangkan nilai atasnya dan menggunakan `...` untuk membuat rentangan yang menyertakan nilai bawah dan juga atasnya. 
+Anda dapat menggunakan `..<` untuk membuat sebuah sebuah rentangan yang menghilangkan nilai atasnya dan menggunakan `...` untuk membuat rentangan yang menyertakan nilai bawah dan juga atasnya.
 
 ### Pemasangan Swift
 
