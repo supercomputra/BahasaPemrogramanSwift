@@ -17,4 +17,4 @@ Jika anda ingin berkontribusi, anda dapat:
 Ketentuan lain yang lengkap tentang tata cara berkontribusi dapat dilihat pada [tautan berikut](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/blob/main/CONTRIBUTING.md).
 
 ## Atribusi
-Sama dengan dokumentasi resmi Apple, [Attribution 4.0 International (CC BY 4.0)]https://creativecommons.org/licenses/by/4.0/
+Sama dengan dokumentasi resmi Apple, [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
