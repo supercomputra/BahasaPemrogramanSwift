@@ -65,7 +65,7 @@ Untuk kalangan pelajar atau mahasiswa, mempelajari Swift dapat mejadi pengenalan
 ![Logo Swift](https://swift.org/assets/images/swift.svg)
 
 Swift adalah bahasa pemrograman yang serbaguna yang dibangun menggunakan sebuah pendekatan moderen terhadap keamanan, performa, dan _design patterns_ pada perangkat lunak.
-Tujuan dari proyek Swift dibuat adalah untuk memberikan bahasa pemrograman terbaik untuk digunakan mulai dari pemrograman sistem, aplikasi _mobile_, aplikasi _desktop_, hingga meningkatkan skalabilitas pada perangkat lunak berbasis komputasi awan. Dan yang lebih penting lagi, Swift dirancang untuk membuat sebuah penulisan dan perawatan sebuah program yang "benar" menjadi lebih mudah untuk para pengembang. Untuk mencapai tujuan ini, kami percaya bahwa cara terbaik untuk menulis dalam Swift juga harus sesuai dengan kriteria sebagai berikut:
+Tujuan dari proyek Swift ini dibuat adalah untuk memberikan bahasa pemrograman terbaik untuk digunakan mulai dari pemrograman sistem, aplikasi _mobile_, aplikasi _desktop_, hingga meningkatkan skalabilitas pada perangkat lunak berbasis komputasi awan. Dan yang lebih penting lagi, Swift dirancang untuk membuat sebuah penulisan dan perawatan sebuah program yang "benar" menjadi lebih mudah untuk para pengembang. Untuk mencapai tujuan ini, kami percaya bahwa cara terbaik untuk menulis dalam Swift juga harus sesuai dengan kriteria sebagai berikut:
 
 - **Aman**  
   Yang paling terpenting dalam menulis kode juga haruslah memiliki sifat yang aman. Sifat-sifat yang tidak dapat didefinisikan tentu adalah sebuahg musuh dari aspek keamanan, dan kesalahan-kesalahan pada pengembang seharusnya dapat ditangkap jauh sebelum perangkat lunat diproduksi. Namun dikarenakan Swift sangat memegang erat aspek kemanan didalamnya seringkali Swift terasa memiliki aturan-aturan yang cukup ketat, dengan perancangan bahasa pemrograman Swift seperti ini dipercaya dapat lebih memudahkan kita untuk jangka panjang.
@@ -74,6 +74,31 @@ Tujuan dari proyek Swift dibuat adalah untuk memberikan bahasa pemrograman terba
 - **Ekspresif**  
   Swift mendapatkan manfaat langsung dari puluhan tahun pengembangan ilmu komputer dimana pengembang dapat menggunakan _syntax_ yang mudah digunakan bersama dengan fitur-fitur moderen yang dapat diharapkan. Pengembangan Swift tidak akan pernah selesai. Kami akan tersu memantau peningkatan dan pengembangan bahasa ini dan mempertahankan segala yang telah berfungsi dengan baik demi kemajuan bahasa pemrograman Swift kedepannya.
   _Tools_ ada bagian yang sangat penting pada ekosistem Swift. Kami akan terus berusaha kersa untuk mengintegrasikan dengan baik dalam hal peralatan pengembang, _build time_ yang lebih cepat, alat diagnosa yang baik, dan juga memberikan pengalaman pengembangan yang interaktif. _Tools_ dapat memberikan manfaat yang banyak pada proses pengembangan perangkat lunak, seperti _playground_ yang berbasis Swift pada Xcode, atau sebuah REPL berbasi web yang dapat bekerja dengan kode dari server berbasis Linux.
+
+Swift sangat mudah digunakan apabila anda adalah pemrogram yang masih baru. Bahasa pemrograman ini memiliki standar kualitas industri yang tidak hanya ekspresif tetapi juga gampang digunakan untuk aktifitas _scripting_. Dengan menulis kode Swift pada sebuah _Playground_ memudahkan anda untuk bereksperimen dengan melihat hasil dari kode yang anda tulis secara langsung tanpa menunggu lamanya proses perakitan oleh kompilator untuk sebuah aplikasi.
+
+Swift dapat dengan mudah mengidentifikasi kesalahan-kesalahan umum pemrograman dengan mengadopsi kaidah-kaidah pemrogramana berikut:
+
+- Variabel harus selalu diinisialisasi sebelum dapat digunakan.
+- Indeks pada array selalu diperiksa untuk menemukan apakah ada kesalahan yeng memungkinkan indeks lebih besar dari ukuran array.
+- Bilangan selalu diperiksa untuk mencegah terjadinya _overflow_.
+- Nilai-nilai yang ditandai sebagai opsional dapat memastikan dirinya sendiri agar nilai `nil` ditangani secara eksplisit.
+- Memori diatur secara otomatis.
+- Penanganan _error_ dapat memungkinkan adanya pemulihan yang teratur dari kesalahan-kesalahan yang tidak diharapkan.
+
+Kode Swift dikompilasi dan juga dioptimalkan penggunaannya agar dapat digunakan pada perangkat-perangkat moderen. Sintaksis dan _library_ standar telah dirancang berdasarkan pedoman-pedoman tertentu mendasari penulisan sehingga dapat memberikan hasil performa yang terbaik. Hal ini menjadikan kombinasi keamanan dan kecepatan yang membuat Swift adalah pilihan yang sangat baik untuk segala hal mulai dari sesederhana mencetak _"Hello, World!"_ hingga untuk penggunaan yang menyeluruh pada sistem operasi.
+
+## Kompatibilitas Versi
+
+Pedoman ini ditulis berdasarkan versi Swift 5.3 yang juga merupakan versi standar untuk digunakan pada Xcode 12. Anda dapat menggunakan Xcode 12 untuk melakukan perakitan pada target-target yang ditulis dengan Swift 5.3, Swift 3.2, atau Swift 4.
+
+Fungsi-fungsi yang pada umumnya disematkan pada Swift 5.3 jyga akan tersedia apabila anda menggunakan Xcode 12 untuk merakit kode yang hanya menggunakan versi Swift 4 atau 4.2. Namun demikian ada beberapa hal yang hanya tersedia pada Swift versi 5.3 diantaranya adalah sebagai berikut:
+
+- Fungsi-fungsi yang mengembalikan tipe gamblang membutuhkan _runtime_ Swift 5.1.
+- Ekspresi `try?` tidak memberikan tambahan tingakatan keopsionalitasan. Ini dikarenakan untuk ekspresi terebut telah secara jelas mengembalikan nilai yang opsional.
+- Inisialisasi literal untuk bilangan dengan nilai yang besar akan secara langsung diubah menjadi tipe bilangan yang benar. Contohnya untuk `UInt64(0xffff_ffff_ffff_ffff)` akan langsung diubah menjadi nilai yang benar dan tidak menjadi nilai yang _overflow_.
+
+Sebuah target yang ditulis menggunakan Swift versi 5.3 dapat menggunakan dependen yang ditulis menggunakan versi 4.2 atau 4 dan juga berlaku sebaliknya. Dengan demikian, apabila anda menulis sebuah proyek yang besar dan terdiri dari beberapa kerangka kerja, anda dapat melakukan migrasi pada kode anda dari versi 4 ke versi 5.3 sekaligus.
 
 ### Fitur
 
@@ -88,8 +113,6 @@ Tujuan dari proyek Swift dibuat adalah untuk memberikan bahasa pemrograman terba
 #### _Platform_ Baru
 
 ## Perkenalan
-
-Disini kita anda akan menemukan informasi tentang bagaimana cara menggunakan bahasa pemrograman Swift. Jika Swift adalah bahasa pemrograman yang baru untuk anda, maka anda bisa mengunjungi [_A Swift Tour_](https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1) terlebih dahulu untuk pengenalan singkat pada konsep-konsep dan fitur-fitur yang penting pada bahasa ini.
 
 ### Pemasangan Swift
 
