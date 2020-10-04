@@ -1,9 +1,9 @@
 # *The Swift Programming Language in Bahasa Indonesia*
-
-Versi yang sedang tayang dapat diakses melalui https://supercomputra/bahasapemrogramanswift
 Terjemahan bahasa Indonesia dari tutorial resmi Apple "The Swift Programming Language"
 
 [Dokumen Asli](https://docs.swift.org/swift-book/)
+
+Ini adalah repositori dari halaman https://supercomputra/bahasapemrogramanswift.  
 
 ## Versi
 Perbaharuan untuk Swift 5.3
