@@ -75,7 +75,7 @@ Jika anda pernah menulis kode dalam bahasa C atau Objective-C, sintaksis ini aka
 
 Perkenalan ini akan memberikan anda informasi dasar tentang bagaimana memulai menulis kode Swift dengan cara memperlihatkan anda bagaimana cara mencapai berbagai tugas-tugas lazim yang ada pada dunia pemrograman. Jangan kahwatir jika anda menemui sesuatu yang anda tidak pahami, segala hal yang diperkenalkan disini akan dijelaskan dengan detail pada bab berikutnya.
 
-> Catatan  
+> **CATATAN**  
 > Untuk pengalaman yang terbaik, anda disarankan untuk membuka bab ini sebagai _playground_ di Xcode anda. _Playgrounds_ memungkinkan anda untuk menyunting setiap baris kode dan melihat hasilnya secara instan.  
 > [Unduh _Playground_](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.playground.zip)
 
@@ -99,7 +99,7 @@ let implicitDouble = 70.0
 let explicitDouble: Double = 70
 ```
 
-> Eksperimen  
+> **EKSPERIMEN**  
 > Cobalah untuk menghilangkan fungsi untuk mengubah nilai menjadi `String` pada baris terakhir. _Error_ apakah yang anda dapatkan?
 
 Sebuah nilai dapat pula disematkan pada `String` dengan cara yang lebih sederhana. Anda dapat menulis tanda kurung yang disertai dengan tanda garis miring terbalik sebelum tanda kurung pembuka. Contohnya:
@@ -111,7 +111,7 @@ let appleSummary = "I have \(apples) apples."
 let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 ```
 
-> Eksperimen  
+> **EKSPERIMEN**  
 > Cobalah gunakan \() untuk menyematkan nilai berupa kalkulasi bilangan berkoma di dalam sebuah `String`. Anda juga dapat mencoba menyematkan nama seseorang di dalam sebuah kalimat sapaan.
 
 Anda dapat menggunakan tiga buah tanda kutip ganda (""") untuk `String`yang ditulis dengan dalam beberapa baris. Indentasi yang ada pada setiap awal baris yang dibubuhi tanda kutip akan dihapus apabila sesuai dengan indentasi dari tanda kutip penutup. Contohnya:
@@ -191,7 +191,7 @@ if let name = optionalName {
 }
 ```
 
-> Eksperimen  
+> **EKSPERIMEN**  
 > Gantilah `optionalName` menjadi `nil`. Apakah nilai `greeting` yang anda dapatkan? Tambahkan sebuah klausa `else` yang memberikan nilai `greeting` berbeda apabila `optionalName` memiliki nilai `nil`
 
 Apabila nila optional adalah `nil`, kondisi menjadi `false` dan blok kode yang ada di dalam kurung kurawal akan dilewati. Sebaliknya, nilai opsional menjadi terbuka dan ditetapkan kepada konstan yang dinyatakan setelah `let` yang membuat nilai tersebut dapat dipakai di dalam blok kode di dalamnya.
@@ -221,7 +221,7 @@ default:
 // Mencetak "Is it a spicy red pepper?"
 ```
 
-> Eksperimen  
+> **EKSPERIMEN**  
 > Cobalah hapus kasus didalam blok kode `default`. Kesalahan apakah yang anda dapatkan?
 
 Anda dapat melihat dari potongan kode di atas bagimana `let` dapat digunakan di dalam pernyataan berbasis `switch`.
@@ -248,7 +248,7 @@ print(largest)
 // Prints "25"
 ```
 
-> Eksperimen  
+> **EKSPERIMEN**  
 > Cobalah tambahkan variabel lain untuk tetap melacak jenis dari nilai yang mana yang merupakan nilai terbesar dan juga untuk mengetahui apakah jenis angka tersebut sebelumnya.
 
 Anda dapat menggunakan `while` untuk mengulang sebuah blok kode hingga suatu kondisi tertentu berubah. Kondisi dari suatu pengulangan bisa ditulis di akhir, ini akan menjadikan blok kode dari pengulangan yang anda tulis akan dijalankan setidaknya sekali.
@@ -531,7 +531,7 @@ Anda dapat melakukan deklarasi beberapa variabel sekaligus dengan menggunakan sa
 var x = 0.0, y = 0.0, z = 0.0
 ```
 
-> **Catatan**  
+> **CATATAN**  
 > Jika nilai yang tersimpan dalam kode anda tidak akan berubah, selalu gunakan `let` untek mendeklaraskian sebuah nilai sebagai konstan. Gunakan variabel hanya untuk menyimpan nilai yang dapat berubah sewaktu-waktu.
 
 ##### Tipe Anotasi
