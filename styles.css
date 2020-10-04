@@ -1,0 +1,313 @@
+//
+//  File.swift
+//  
+//
+//  Created by Zulwiyoza Putra on 04/10/20.
+//
+
+/**
+ *  Publish Foundation theme
+ *  Copyright (c) Zulwiyoza Putra 2020
+ *  MIT license, see LICENSE file for details
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+    
+main {
+    flex: 1;
+}
+    
+.wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    text-align: left;
+}
+
+small {
+    color: #999;
+}
+
+article.content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+article.content * {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article.content img, iframe {
+    max-width: 100%;
+    margin: 24px auto 24px auto;
+    display: block;
+}
+
+article.content h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 2.85em;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 1.6em;
+    color: #000;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header .social-links {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+header .social-links {
+    display: flex;
+    -webkit-flex-direction: row;
+    font-size: 0.8em;
+/*    color: #1a73e8;*/
+}
+
+header .wrapper .social-links a div {
+    display: flex;
+    -webkit-flex-direction: row;
+}
+
+header > .wrapper > .social-links > a {
+    margin-right: 16px;
+}
+
+/*header > .wrapper > .social-links > a:last-child {*/
+/*    margin-bottom: 0px;*/
+/*}*/
+
+header > .wrapper > .social-links > a > div > img {
+    margin-right: 8px;
+}
+
+header .social-links img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+header .social-links a:last-child {
+    margin-right: 0;
+}
+
+header .wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: left;
+    display: flex;
+    border-bottom: 1px solid #eee;
+    -webkit-flex-direction: column;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .site-name {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+nav {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 12px;
+    line-height: 1.5em;
+}
+
+nav li a.selected {
+    text-decoration: underline;
+}
+
+a {
+    color: inherit;
+}
+    
+.description {
+    margin-bottom: 40px;
+}
+
+.read-more-link {
+    color: #1a73e8
+}
+    
+.item-list > li {
+    display: block;
+    padding: 16px 0;
+    margin-bottom: 20px;
+}
+    
+.item-list > li:last-child {
+    margin-bottom: 0;
+}
+    
+.item-list h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-family: 'Lato', serif;
+    font-weight: 900;
+}
+    
+.item-list a {
+    text-decoration: none;
+}
+    
+.item-list p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.75em;
+    font-family: 'Open Sans', sans-serif;
+}
+    
+.item-list small {
+    font-family: 'Open Sans', sans-serif;
+    color: #999;
+}
+    
+.tag-list {
+    margin-bottom: 12px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+}
+    
+.tag-list li,
+.tag {
+    display: inline-block;
+    color: #1a73e8;
+    margin-right: 5px;
+    }
+    
+.tag-list a,
+.tag a {
+    text-decoration: none;
+    }
+    
+.item-page .tag-list {
+    display: inline-block;
+}
+    
+.content {
+    margin-bottom: 40px;
+}
+    
+.browse-all {
+    display: block;
+    margin-bottom: 30px;
+}
+    
+.all-tags li {
+    font-size: 1.4em;
+    margin-right: 10px;
+    padding: 6px 10px;
+}
+
+footer {
+    color: #8a8a8a;
+    background-color: #f8f9fa;
+    font-size: 0.8em;
+}
+
+footer .wrapper {
+    display: flex;
+    -webkit-flex-direction: column;
+}
+
+ /**
+  *  Example CSS file that can be used to style Splash HTML output
+  *  Copyright (c) John Sundell 2018
+  *  MIT license - see LICENSE.md
+  */
+
+ pre {
+     margin-bottom: 1.5em;
+     background-color: #1a1a1a;
+     padding: 16px 0;
+     border-radius: 16px;
+ }
+
+ pre code {
+     font-family: monospace;
+     display: block;
+     padding: 0 20px;
+     color: #a9bcbc;
+     line-height: 1.4em;
+     font-size: 0.95em;
+     overflow-x: auto;
+     white-space: pre;
+     -webkit-overflow-scrolling: touch;
+ }
+
+ pre code .keyword {
+     color: #e73289;
+ }
+
+ pre code .type {
+     color: #8281ca;
+ }
+
+ pre code .call {
+     color: #348fe5;
+ }
+
+ pre code .property {
+     color: #21ab9d;
+ }
+
+ pre code .number {
+     color: #db6f57;
+ }
+
+ pre code .string {
+     color: #fa641e;
+ }
+
+ pre code .comment {
+     color: #6b8a94;
+ }
+
+ pre code .dotAccess {
+     color: #92b300;
+ }
+
+ pre code .preprocessing {
+     color: #b68a00;
+ }

@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"/><meta name="og:site_name" content="Bahasa Pemrograman Swift"/><link rel="canonical" href="https://your-website-url.com/pemasangan"/><meta name="twitter:url" content="https://your-website-url.com/pemasangan"/><meta name="og:url" content="https://your-website-url.com/pemasangan"/><title>Pemasangan Swift | Bahasa Pemrograman Swift</title><meta name="twitter:title" content="Pemasangan Swift | Bahasa Pemrograman Swift"/><meta name="og:title" content="Pemasangan Swift | Bahasa Pemrograman Swift"/><meta name="description" content="A description of BahasaPemrogramanSwift"/><meta name="twitter:description" content="A description of BahasaPemrogramanSwift"/><meta name="og:description" content="A description of BahasaPemrogramanSwift"/><meta name="twitter:card" content="summary"/><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="true"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&Open+Sans:ital@0;1&family=Roboto+Slab:wght@600&display=swap"/><link rel="stylesheet" href="/styles.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to Bahasa Pemrograman Swift"/></head><body><header><div class="wrapper"><a class="site-name" href="/"><h1>Bahasa Pemrograman Swift</h1></a><nav class="sections"><ul><li><a class="selected" href="/">Beranda</a></li><li><a href="/pedoman">Pedoman</a></li><li><a href="/rujukan">Rujukan</a></li><li><a href="/revisi">Revisi</a></li><li><a href="/swift">Swift</a></li><li><a href="/pemasangan">Pemasangan</a></li><li><a href="https://github.com/supercomputra/BahasaPemrogramanSwift">Kontribusi</a></li></ul></nav></div></header><div class="wrapper"><h1>Pemasangan Swift</h1><p>Langkah pertama dalam menggunakan Swift adalah dengan mengunduh dan memasang <em>compiler</em> dan komponen-komponen lain yang dibutuhkan. Anda dapat <a href="https://swift.org/download">*mengunduh</a> dan mengikuti instruksi sesuai dengan target <em>platform</em> anda. Untuk dapat mengikuti contoh-contoh berikut, pastikan anda menambahkan Swift pada <code>$PATH</code>.</p><h2>Pemasangan Pada Sistem Operasi macOS</h2><p>Lokasi yang lazim untuk <em>toolchain</em> yang dapat diunduh pada macOS ada pada <code>/Library/Developer/Toolchains</code>. Anda dapat membuat <em>toolchan</em> terbaru yang telah terpasang untuk digunakan pada terminal dengan menggunakan perintah berikut:</p><pre><code>$ export TOOLCHAINS=swift
+</code></pre><p>Untuk memilih toolchain yang telah terinstal yang lain, anda dapat menggunakan <code>identifier</code> variabel pada <code>TOOLCHAINS</code>. <code>identifier</code> tersebut dapat ditemukan pada berkas bernama <code>Info.plist</code> di dalam <em>toolchain</em>.</p><pre><code>$ /usr/libexec/PlistBuddy -c "Print CFBundleIdentifier:" /Library/Developer/Toolchains/swift-4.0-RELEASE.xctoolchain/Info.plist
+org.swift.4020170919
+
+$ export TOOLCHAINS=org.swift.4020170919
+</code></pre><h2>Pemasangan Pada Sistem Operasi Linux</h2><ul><li><strong>Ubuntu 16.04</strong></li></ul><pre><code>$ apt-get install \
+          binutils \
+          git \
+          libc6-dev \
+          libcurl3 \
+          libedit2 \
+          libgcc-5-dev \
+          libpython2.7 \
+          libsqlite3-0 \
+          libstdc++-5-dev \
+          libxml2 \
+          pkg-config \
+          tzdata \
+          zlib1g-dev
+</code></pre><ul><li><strong>Ubuntu 18.04</strong></li></ul><pre><code>$ apt-get install \
+          binutils \
+          git \
+          libc6-dev \
+          libcurl4 \
+          libedit2 \
+          libgcc-5-dev \
+          libpython2.7 \
+          libsqlite3-0 \
+          libstdc++-5-dev \
+          libxml2 \
+          pkg-config \
+          tzdata \
+          zlib1g-dev
+</code></pre><ul><li><strong>Ubuntu 20.04</strong></li></ul><pre><code>$ apt-get install \
+          binutils \
+          git \
+          gnupg2 \
+          libc6-dev \
+          libcurl4 \
+          libedit2 \
+          libgcc-9-dev \
+          libpython2.7 \
+          libsqlite3-0 \
+          libstdc++-9-dev \
+          libxml2 \
+          libz3-dev \
+          pkg-config \
+          tzdata \
+          zlib1g-dev
+</code></pre><ul><li><strong>CentOS 7</strong></li></ul><pre><code>$ yum install \
+      binutils \
+      gcc \
+      git \
+      glibc-static \
+      libbsd-devel \
+      libedit \
+      libedit-devel \
+      libicu-devel \
+      libstdc++-static \
+      pkg-config \
+      python2 \
+      sqlite
+
+      # __block conflicts with clang's __block qualifier
+      sed -i -e 's/\*__block/\*__libc_block/g' /usr/include/unistd.
+</code></pre><ul><li><strong>CentOS 8</strong></li></ul><pre><code>$ yum install \
+      binutils \
+      gcc \
+      git \
+      glibc-static \
+      libbsd-devel \
+      libedit \
+      libedit-devel \
+      libicu-devel \
+      libstdc++-static \
+      pkg-config \
+      python2 \
+      sqlite
+</code></pre><ul><li><strong>Amazon Linux</strong></li></ul><pre><code>$ yum install \
+      binutils \
+      gcc \
+      git \
+      glibc-static \
+      gzip \
+      libbsd \
+      libcurl \
+      libedit \
+      libicu \
+      libsqlite \
+      libstdc++-static \
+      libuuid \
+      libxml2 \
+      tar \
+      tzdata
+</code></pre><p>Apabila anda memasang <em>toolchain</em> Swift pada sistem operasi berbasis Linux ke sebuah direktori dan bukan <em>root</em> sistem, maka anda harus menjalankan perintah berikut menggunakan <em>path</em> yang aktual dari pemasangan Swift anda.</p><pre><code>$ export PATH=/path/to/Swift/usr/bin:"${PATH}"
+</code></pre><h2>Pemasangan Pada Sistem Operasi Windows</h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/getting-started/#installing-swift)</p><h3>Visual Studio dan Swift</h3><p>Anda harus memasang pemasang <em>toolchain</em> dari <a href="https://swift.org/download">halaman pengunduhan berikut</a> dan <a href="https://visualstudio.microsoft.com/">Visual Studio 2019</a>.</p><p>Berikut adalah komponen-komponen Visual Studio yang <strong>dibutuhkan</strong>: | Komponen | Visual Studio ID | |-------------------------------------------------------|-----------------------------------------------------| | MSVC v142 - VS 2019 C++ x64/x86 build tools (v14.25)* | Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | | Windows Universal C Runtime | Microsoft.VisualStudio.Component.Windows10SDK | | Windows 10 SDK (10.0.17763.0)** | Microsoft.VisualStudio.Component.Windows10SDK.17763 |</p><ul><li>Anda dapat memasang <em>toolset</em> dengan <em>build</em> yang lebih baru ** Anda dapat memasang SDK yang lebih baru</li></ul><p>Lokasi pemasangan yang lazim untuk toolchain pada sistem operasi Windows adalah <code>%SystemDrive%\Library\Developer\Toolchains</code>.</p><h3>Berkas-berkas Pendukung</h3><p>Perlu diingat bahwa anda seharusnya menggunakan <code>x64 Native Tools for VS2019 Command Prompt</code> untuk dapat menjalankan <em>toolchain</em>. <em>Script</em> <code>x64 Native Tools for VS2019 Command Prompt runs the DevEnv</code> dari Visual Studio dapat mengatur variabel lingkungan kerja yang diperlukan untuk menemukan <em>headers</em> pada sistem.</p><p>Agar dapat membuat Windows SDK dapat diakses pada Swift, diperlukan <em>deploy</em> untuk beberapa berkas ke dalam Windows SDK. Perintah berikut ini akan memodifikasi pemasangan Visual Studio. Untuk dapat menegsekusi perintah berikut anda perlu menjalankannya dari sisi <em>Administrator</em>.</p><p><code>x86 Native Tools for VS2019 Command Prompt.</code></p><pre><code>copy %SDKROOT%\usr\share\ucrt.modulemap "%UniversalCRTSdkDir%\Include\%UCRTVersion%\ucrt\module.modulemap"
+copy %SDKROOT%\usr\share\visualc.modulemap "%VCToolsInstallDir%\include\module.modulemap"
+copy %SDKROOT%\usr\share\visualc.apinotes "%VCToolsInstallDir%\include\visualc.apinotes"
+copy %SDKROOT%\usr\share\winsdk.modulemap "%UniversalCRTSdkDir%\Include\%UCRTVersion%\um\module.modulemap"
+</code></pre><p>Dikarenakan ini adalah pemasangan berkas-berkas ke dalam <em>image</em> dari Visual Studio, berkas-berkas tersebut perlu disalin setiap kali Visual Studio diperbaharui.</p><h3>Versi Swift</h3><p>Anda dapat melakukan verifikasi bahwa anda menjalankan versi Swift yang diinginkan dengan cara memasuki <code>swift</code> <em>command</em> dan memberikan <em>flag</em> <code>--version</code> seperti berikut ini:</p><pre><code>$ swift --version
+Apple Swift version 2.2-dev (LLVM ..., Clang ..., Swift ...)
+</code></pre><p><em>Flag</em> <code>-dev</code> yang disematkan pada nomor versi digunakan untuk mengindikasikan bahwa bahasa yang anda gunakan adalah sebuah <em>development build</em> dan bukanlah versi yang sudah rilis.</p><h2>Penggunaan REPL</h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/getting-started/#using-the-repl)</p><h2>Penggunaan <em>Package Manager</em></h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/getting-started/#using-the-package-manager)</p><h2>Penggunaan <em>LLDB Debugger</em></h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/getting-started/#using-the-lldb-debugger)</p><h1>Dokumentasi</h1><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/documentation/)</p><h2>Bahasa Pemrograman Swift</h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/documentation/#the-swift-programming-language)</p><h2><em>Swift Package Manager</em></h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/documentation/#swift-package-manager)</p><h2>Pedoman Perancangan API</h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/documentation/#api-design-guidelines)</p><h2>Pedoman Migrasi</h2><p>[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new) [[dokumen rujukan]](https://swift.org/documentation/#migration-guides)</p></div><footer><div class="wrapper"><small>Copyright © Putra 2020</small><small>Generated by <a href="https://github.com/apple/swift">Swift</a> using <a href="https://github.com/JohnSundell/Publish">Publish</a>. 100% Javascript Free.</small></div></footer></body></html>
