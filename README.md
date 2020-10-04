@@ -282,6 +282,18 @@ print(total)
 
 Anda dapat menggunakan `..<` untuk membuat sebuah sebuah rentangan yang menghilangkan nilai atasnya dan menggunakan `...` untuk membuat rentangan yang menyertakan nilai bawah dan juga atasnya.
 
+### Fungsi dan Klosur
+
+### Obyek dan Kelas
+
+### Enumerasi dan Struktur
+
+### Protokol dan Ekstensi
+
+### Penanganan Kesalahan
+
+### Generik
+
 ### Pemasangan Swift
 
 Langkah pertama dalam menggunakan Swift adalah dengan mengunduh dan memasang _compiler_ dan komponen-komponen lain yang dibutuhkan. Anda dapat [\*mengunduh](https://swift.org/download) dan mengikuti instruksi sesuai dengan target _platform_ anda.
@@ -558,7 +570,7 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ### Fungsi
 
-### Pengakhiran
+### Klosur
 
 ### Enumerasi
 
@@ -578,11 +590,11 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ### Perantaian Opsional
 
-### Penanganan _Error_
+### Penanganan Kesalahan
 
 ### Perubahan Tipe
 
-### Tipe Terbenam
+### Tipe Berlapis
 
 ### Ekstensi
 
