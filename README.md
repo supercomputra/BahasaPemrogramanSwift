@@ -1,10 +1,8 @@
 # Bahasa Pemrograman Swift
 
+## [Daftar Isi](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/1)
+
 _Halaman ini dirangkum dan disadur dari halaman resmi komunitas https://docs.swift.org_ dan https://docs.swift.org/swift-book/
-
-## Daftar Isi
-
-[Isu: Daftar Isi](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/1)
 
 Diluncurkan pada tahun 2014, bahasa pemrograman Swift telah menjadi salah satu bahasa yang sangat berkembang pesat di dalam sejarah bahasa pemograman. Ini dikarenakan Swift memberikan kemudahan dalam menulis perangkat lunak yang tidak hanya cepat namun juga aman secara perancangan. Tujuan dibuatnya bahasa ini cukup ambisius yaitu dengan Swift diharapkan semua orang dapat melakukan pemrograman sederhana yang jauh lebh mudah and hal yang rumit menjadi memungkinkan.
 
@@ -52,15 +50,33 @@ Sebuah target yang ditulis menggunakan Swift versi 5.3 dapat menggunakan depende
 
 ### Fitur
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/about/#features)
+
 ### Penerjemahan Dokumentasi Berbahasa Indonesia dan _Open Source_
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/about/#swiftorg-and-open-source)
 
 ### Dukungan _Platform_
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/about/#platform-support)
+
 #### _Platform_ dari Apple
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/about/#apple-platforms)
 
 #### Linux
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/about/#linux)
+
 #### _Platform_ Baru
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/about/#new-platforms)
 
 ## Perkenalan
 
@@ -407,7 +423,7 @@ let heartsDescription = hearts.simpleDescription()
 
 Perhatikan bagaimana kasus `hearts` dari enumerasi di atas dirujuk. Ketika menentukan sebuah nilai untuk konstan `heatrs`, kasus enumerasi `Suit.hearts` dirujuk menggunakan nama yang lengkap. Ini dikarenakan konstan tidak memiliki tipe yang ditentukan secara eksplisit. Di dalam `switch`, kasus enumerasi dirujuk menggunakan bentuk yang disingkat (`.hearts`) karena nilai dari `self` telah diketahui tipenya sebagai `Suit`. Anda juga dapat menggunakan penyingkatan seperti ini kapanpun selama tipe dari suatu nilai telah diketahui secara implisit.
 
-Apabila suatu enumerasi memiliki nilai-nilai mentah, maka nilai-nilai tersebut akan dianggap sebagai bagian dari deklarasi suatu enumerasi. Hal ini berarti untuk setiap wujud dari suatu kasus enumerasi tertentu akan selalu memeiliki nilai mentah yang sama. Cara lain untuk mendeklarasikan kasus-kasus pada enumerasi adalah dengan memiliki nilai-nilai yang dapat terasosiasi pada kasus yang bersangkutan. Anda dapat menganggap nilai-nilai yang terasosiasi bersifat sebagaimana suatu properti tersimpan dari suatu wujud kasus enumerasi. Contohnya, anda dapat melihat kasus dimana anda perlu mendapatkan informasi waktu terbit (*sunrise*) dan terbenamnya (*senset*) matahari dari suatu *server*. *Server* tersebut akan merespon permintaan anda dengan memberikan informasi yang anda minta atau memberikan informasi tentang apa yang menjadi kesalahan dalam permintaan anda.
+Apabila suatu enumerasi memiliki nilai-nilai mentah, maka nilai-nilai tersebut akan dianggap sebagai bagian dari deklarasi suatu enumerasi. Hal ini berarti untuk setiap wujud dari suatu kasus enumerasi tertentu akan selalu memeiliki nilai mentah yang sama. Cara lain untuk mendeklarasikan kasus-kasus pada enumerasi adalah dengan memiliki nilai-nilai yang dapat terasosiasi pada kasus yang bersangkutan. Anda dapat menganggap nilai-nilai yang terasosiasi bersifat sebagaimana suatu properti tersimpan dari suatu wujud kasus enumerasi. Contohnya, anda dapat melihat kasus dimana anda perlu mendapatkan informasi waktu terbit (_sunrise_) dan terbenamnya (_senset_) matahari dari suatu _server_. _Server_ tersebut akan merespon permintaan anda dengan memberikan informasi yang anda minta atau memberikan informasi tentang apa yang menjadi kesalahan dalam permintaan anda.
 
 ```swift
 enum ServerResponse {
@@ -754,6 +770,9 @@ $ export PATH=/path/to/Swift/usr/bin:"${PATH}"
 
 #### Pemasangan Pada Sistem Operasi Windows
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/getting-started/#installing-swift)
+
 ##### Visual Studio dan Swift
 
 Anda harus memasang pemasang _toolchain_ dari [halaman pengunduhan berikut](https://swift.org/download) dan [Visual Studio 2019](https://visualstudio.microsoft.com/).
@@ -799,17 +818,43 @@ _Flag_ `-dev` yang disematkan pada nomor versi digunakan untuk mengindikasikan b
 
 ### Penggunaan REPL
 
-### Penggunaan LLDB Debugger
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/getting-started/#using-the-repl)
+
+### Penggunaan _Package Manager_
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/getting-started/#using-the-package-manager)
+
+### Penggunaan _LLDB Debugger_
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/getting-started/#using-the-lldb-debugger)
 
 ## Dokumentasi
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/documentation/)
+
 ### Bahasa Pemrograman Swift
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/documentation/#the-swift-programming-language)
 
 ### _Swift Package Manager_
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/documentation/#swift-package-manager)
+
 ### Pedoman Perancangan API
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/documentation/#api-design-guidelines)
+
 ### Pedoman Migrasi
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://swift.org/documentation/#migration-guides)
 
 ## Pedoman Penggunaan
 
@@ -857,86 +902,308 @@ var x = 0.0, y = 0.0, z = 0.0
 
 ##### Tipe Anotasi
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID312)
+
 ##### Penamaan Konstan dan Variabel
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID313)
 
 ##### Pencetakan Konstan dan Variabel
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID314)
+
 #### Komentar
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID315)
 
 #### Titik Koma
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID316)
+
 #### Bilangan
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID317)
+
+##### Batas Bilangan
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID318)
+
+##### Int
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID319)
+
+##### UInt
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID320)
 
 #### Bilangan Berkoma
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID321)
+
+#### Pengamanan dan Inferensi Tipe
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID322)
+
+#### Literal Numerik
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID323)
+
+#### Pengonversian Tipe Numerik
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID324)
+
+##### Pengonversian Tipe Bilangan Bulat
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID325)
+
+##### Pengonversian Tipe Bilangan Bulat & Bilangan Berkoma
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID326)
+
+#### Pengaliasan Tipe
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID327)
+
+#### _Boolean_
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID328)
+
+#### _Tuple_
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID329)
+
+#### _Opsional_
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID330)
+
+##### Kenihilan
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID331)
+
+##### Pernyataan Kondisional dan Pembukaan Nilai
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID332)
+
+##### Pengikatan Nilai Opsional
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID333)
+
+##### Pernyataan Kondisional dan Pembukaan Nilai Implisit
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID334)
+
+#### Asersi dan Prekondisi
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID335)
+
 ### Operator Dasar
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html)
 
 ### String dan Karakter
 
-### Koleksi
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html)
+
+### Tipe Koleksi
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
 
 ### Kontrol Alur
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html)
+
 ### Fungsi
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#)
 
 ### Klosur
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
+
 ### Enumerasi
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html)
 
 ### Struct dan Class
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
+
 ### Properti
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Properties.html)
 
 ### Metode
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Methods.html)
+
 ### Subskrip
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Methods.html)
 
 ### Pewarisan
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Inheritance.html)
+
 ### Inisialisasi
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html)
 
 ### Deinisialisasi
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html)
+
 ### Perantaian Opsional
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html)
 
 ### Penanganan Kesalahan
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html)
+
 ### Perubahan Tipe
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html)
 
 ### Tipe Berlapis
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/NestedTypes.html)
+
 ### Ekstensi
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html)
 
 ### Protokol
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)
+
 ### Generik
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/Generics.html)
 
 ### Tipe Gamblang
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/OpaqueTypes.html)
+
 ### Penghitung Referensi Otomatis
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html)
 
 ### Keamanan Pada Memori
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/MemorySafety.html)
+
 ### Kontrol Akses
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html)
 
 ### Operator Lanjutan
 
-## Referensi Bahasa
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/AdvancedOperators.html)
+
+## Rujukan Bahasa
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html)
+
+### Tentang Rujukan Bahasa
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html)
 
 ### Struktur Leksikal
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/LexicalStructure.html)
+
 ### Tipe Data Gamblang
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/Types.html)
 
 ### Ekspresi
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/Expressions.html)
+
 ### Pernyataan
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/Statements.html)
 
 ### Deklarasi
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html)
+
 ### Atribut
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html)
 
 ### Pola
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/Patterns.html)
+
 ### Parameter Generik dan Argumen
 
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html)
+
 ### Ringkasan Tatabahasa
+
+[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)  
+[[dokumen rujukan]](https://docs.swift.org/swift-book/ReferenceManual/zzSummaryOfTheGrammar.html)
+
+## Revisi
+Halaman ini diterjemahkan dari halaman resmi dengan revisi terakhir pada tanggal 16 September 2020.
