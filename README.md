@@ -284,15 +284,324 @@ Anda dapat menggunakan `..<` untuk membuat sebuah sebuah rentangan yang menghila
 
 ### Fungsi dan Klosur
 
+Anda dapat menggunakan sintaksis `func` untuk mendeklarasikan sebuah fungsi dalam Swift. Fungsi dapat dipanggil menggunakan namanya diikuti dengan argumen-argumennya yang dituliskan di dalam tanda kurung. Tanda panah `->` dapat digunakan untuk memisahkan nama-nama parameter dan tipe dari nilai yang dikembalikan fungsi tersebut.
+
+```swift
+func greet(person: String, day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+greet(person: "Bob", day: "Tuesday")
+```
+
+> **EKSPERIMEN**  
+> Cobalah untuk menghapus parameter `day` dan tambahkan sebuah parameter yang dapat dibubuhkan nantinya didalam kalimat sapaan yang dikembalikan oleh fungsi `greet(person:day:)`.
+
 ### Obyek dan Kelas
+
+Anda dapat menggunakan `class` yang diikuti oleh nama kelas tersebut untuk membuat suatu kelas. Pendeklarasian suatu properti di dalam kelas ditulis sama semerpti penulisan deklarasi konstan dan variabel hanya saja apabila ditulis di dalam kelas properti ini dipakai dalam konteks kelas tersebut. Begitu juga dengan deklarasi metode dan fungsi yang juga ditulis dengan cara yang sama.
+
+```swift
+class Shape {
+    var numberOfSides = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+```
+
+> **EKSPERIMEN**  
+> Cobalah untuk menambahkan properti dengan sintaksis `let` dan tambahkan metode lain yang memerlukan sebuah argumen.
+
+Membuat sebuah wujud dari suatu kelas adalah dengan cara membubuhkan tanda kurung setelah penulisan nama kelas yang bersangkutan. Anda dapat menggunakan sintaksis titik untuk mengakses properti-properti dan metode-metode yang dimiliki dari wujud tersebut.
+
+```swift
+var shape = Shape()
+shape.numberOfSides = 7
+var shapeDescription = shape.simpleDescription()
+```
+
+Kelas `Shape` di atas masih belum memiliki sesuatu yang penting yang disebut konstruktor untuk menyiapkan kelas saat suatu instansi dibuat. Gunakanlah `init` untuk membuat sebuah konstruktor.
+
+```swift
+class NamedShape {
+    var numberOfSides: Int = 0
+    var name: String
+
+    init(name: String) {
+        self.name = name
+    }
+
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+```
 
 ### Enumerasi dan Struktur
 
+Anda dapat menggunakan `enum` untuk membuat sebuah enumerasi. Layaknya kelas dan tipe-tipe lain, enumerasi dapat memiliki metodenya sendiri.
+
+```swift
+enum Rank: Int {
+    case ace = 1
+    case two, three, four, five, six, seven, eight, nine, ten
+    case jack, queen, king
+
+    func simpleDescription() -> String {
+        switch self {
+        case .ace:
+            return "ace"
+        case .jack:
+            return "jack"
+        case .queen:
+            return "queen"
+        case .king:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+let ace = Rank.ace
+let aceRawValue = ace.rawValue
+```
+
+> **EKSPERIMEN**  
+> Cobalah untuk menulis sebuah fungsi yang membandingkan dua `Rank` dengan cara membandingkan nilai mentah (`rawValue`) mereka.
+
+Pada dasarnya, Swift akan menentukan sendiri nilai mentah yang dimulai dari nol dan bertambah satu nial untuk kasus selanjutnya, namun anda dapat melakukan perubahan pada sifat ini dengan cara menuliskan secara eksplisit nilai yang dimaksudkan. Pada contoh di atas, `Ace` secara eksplisit diberikan nilai mentah `1`, dan nilai mentah sisanya akan diberikan nilai berdasarkan urutannya. Anda dapat juga menggunakan `string` atau bilangan-bilangan berkoma sebagai tipe dari nilai mentah pada sebuah enumerasi.
+
+Gunakan konstruktor `init?(rawValue:)` untuk membuat sebuah wujud dari dari sebuah enumerasi dari sebuah nilai mentah. Inisialisasi ini akan mengembalikan kasus enumerasi yang sesuai dengan nilai mentah yang telah ditetapkan sebelumnya atau `nil` apabila tidak ditemukan kasus yang sesuai di dalam enumerasi `Rank` tersebut.
+
+```swift
+if let convertedRank = Rank(rawValue: 3) {
+    let threeDescription = convertedRank.simpleDescription()
+}
+```
+
+Nilai-nilai kasus dari sebuah enumerasi adalah nilai aktual dari kasus tersebut, tidak hanya cara lain penulisan nilai mentahnya. Anda tidak perlu menuliskan nilai mentah apabila anda dihadapkan dengan kasus-kasus dimana setiap kasus tidak memiliki nilai mentah yang bermakna tertentu.
+
+```swift
+enum Suit {
+    case spades, hearts, diamonds, clubs
+
+    func simpleDescription() -> String {
+        switch self {
+        case .spades:
+            return "spades"
+        case .hearts:
+            return "hearts"
+        case .diamonds:
+            return "diamonds"
+        case .clubs:
+            return "clubs"
+        }
+    }
+}
+let hearts = Suit.hearts
+let heartsDescription = hearts.simpleDescription()
+```
+
+> **EKSPERIMEN**  
+> Cobalah untuk menambahkan metode `color()` pada enumerasi `Suit` yang mengembalikan nilai "black" dengan tipe `String` untuk `spade` dan `clubs` dan juga kembalikan "red" untuk kasus `hearts` dan `diamonds`.
+
+Perhatikan bagaimana kasus `hearts` dari enumerasi di atas dirujuk. Ketika menentukan sebuah nilai untuk konstan `heatrs`, kasus enumerasi `Suit.hearts` dirujuk menggunakan nama yang lengkap. Ini dikarenakan konstan tidak memiliki tipe yang ditentukan secara eksplisit. Di dalam `switch`, kasus enumerasi dirujuk menggunakan bentuk yang disingkat (`.hearts`) karena nilai dari `self` telah diketahui tipenya sebagai `Suit`. Anda juga dapat menggunakan penyingkatan seperti ini kapanpun selama tipe dari suatu nilai telah diketahui secara implisit.
+
+Apabila suatu enumerasi memiliki nilai-nilai mentah, maka nilai-nilai tersebut akan dianggap sebagai bagian dari deklarasi suatu enumerasi. Hal ini berarti untuk setiap wujud dari suatu kasus enumerasi tertentu akan selalu memeiliki nilai mentah yang sama. Cara lain untuk mendeklarasikan kasus-kasus pada enumerasi adalah dengan memiliki nilai-nilai yang dapat terasosiasi pada kasus yang bersangkutan. Anda dapat menganggap nilai-nilai yang terasosiasi bersifat sebagaimana suatu properti tersimpan dari suatu wujud kasus enumerasi. Contohnya, anda dapat melihat kasus dimana anda perlu mendapatkan informasi waktu terbit (*sunrise*) dan terbenamnya (*senset*) matahari dari suatu *server*. *Server* tersebut akan merespon permintaan anda dengan memberikan informasi yang anda minta atau memberikan informasi tentang apa yang menjadi kesalahan dalam permintaan anda.
+
+```swift
+enum ServerResponse {
+    case result(String, String)
+    case failure(String)
+}
+
+let success = ServerResponse.result("6:00 am", "8:09 pm")
+let failure = ServerResponse.failure("Out of cheese.")
+
+switch success {
+case let .result(sunrise, sunset):
+    print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
+case let .failure(message):
+    print("Failure...  \(message)")
+}
+// Mencetak "Sunrise is at 6:00 am and sunset is at 8:09 pm."
+
+```
+
+> **EKSPERIMEN**  
+> Tambahkanlah kasus ketiga `ServerResponse` dan jangan lupa tambahkan juga pada pernyataan `switch`.
+
+Perhatikan bagaimana waktu `sunrise` dan `sunset` diekstrak dari nilai `ServerResponse` sebagai bagian dari pencocokan nilai pada kasus-kasus `switch`.
+
+Guneakan `struct` untuk membuat struktur. Struktur mendukung banyak sifat seperti yang dimiliki oleh kelas termasuk didalamnya metode dan konstruktor. Salah satu perbedaan terpenting antara kelas dan strukture adalah wujud dari sebuah struktur akan selalu disalin ketika digunakan pada kode anda, sedangkan pada kelas yang digunakan adalah nilai sebenarnya atau dengan bahasa lain adalah referensi nilai tersebut pada memori.
+
+```swift
+struct Card {
+    var rank: Rank
+    var suit: Suit
+    func simpleDescription() -> String {
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+    }
+}
+let threeOfSpades = Card(rank: .three, suit: .spades)
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+```
+
+> **EKSPERIMEN**  
+> Tulislah sebuah fungsi yang mengembalikan nilai sebuah wujud `Array` yang mengandung satu dek kartu-kartu dengan setiap karetu memiliki properti `rank` dan `suit`.
+
 ### Protokol dan Ekstensi
+
+Gunakan sintaksis `protokol` untuk mendeklarasikan sebuah protocol.
+
+```swift
+protocol ExampleProtocol {
+    var simpleDescription: String { get }
+    mutating func adjust()
+}
+```
+
+Kelas, enumerasi, dan _struct_ dapat mengadopsi protokol.
+
+```swift
+class SimpleClass: ExampleProtocol {
+    var simpleDescription: String = "A very simple class."
+    var anotherProperty: Int = 69105
+    func adjust() {
+        simpleDescription += "  Now 100% adjusted."
+    }
+}
+var a = SimpleClass()
+a.adjust()
+let aDescription = a.simpleDescription
+
+struct SimpleStructure: ExampleProtocol {
+    var simpleDescription: String = "A simple structure"
+    mutating func adjust() {
+        simpleDescription += " (adjusted)"
+    }
+}
+var b = SimpleStructure()
+b.adjust()
+let bDescription = b.simpleDescription
+```
+
+> **EKSPERIMEN**  
+> Cobalah tambahkan syarat lain yang pada protokol `ExampleProtocol`. Perubahan apa yang anda butuhkan untuk membuat kedua kelas `SimpleClass` dan `SimpleStructure` agar tetap mengikuti aturan protokol `ExampleProtocol`?
+
+Perhatikan penggunaan dari kata kunci `mutating` pada deklarasi `SimpleStrutcure` untuk menandai sebuah metode bahwa metode tersebut bersifat memodifikasi struktu. Deklarasi dari `SimpleClass` tidak memerlukan penulisan metode-metode didalamnya untuk ditandai dengan kata kunci `mutating` karena metode di dalam sebuah kelas dapat selalu memodifikasi kleas tersebut.
+
+Gunakan `extension` untuk menambahkan fungsionalitas pada tipe yang sudah eksis, seperti metode baru atau properti yang bersifat `computed`. Anda dapat mengguanakn sebuah extensi untuk menambahkan penglarasan suatu tipe pada protokol tertentu yang telah dideklarasikan di tempat lain, atau bahkan untuk suatu tipe yang anda impor dari suatu pustaka atau kerangka kerja tertentu.
+
+```swift
+extension Int: ExampleProtocol {
+    var simpleDescription: String {
+        return "The number \(self)"
+    }
+    mutating func adjust() {
+        self += 42
+    }
+}
+print(7.simpleDescription)
+// Mencetak "The number 7"
+```
+
+> **EKSPERIMEN**  
+> Buatlah ekstensi untuk tipe `Double` yang dapat menambahkan sebuah properti `absoluteValue`.
+
+Anda dapat mengguanakan sebuah nama protokol sama seperti tipe yang telah ada yang lain. Contohnya untuk membuat sebuah koleksi dari obyek-obyek yang memiliki tipe yang berbeda-beda tetapi tetap selaras dengan suatu protokol yang sama. Ketika anda bekerja menggunakan nilai-nilai yang memiliki tipe berupa sebuah tipe protokol, metode-metode di luar definisi protokol tersebut tidak akan tersedia untuk dapat digunakan.
+
+```swift
+let protocolValue: ExampleProtocol = a
+print(protocolValue.simpleDescription)
+// Mencetak "A very simple class."
+// print(protocolValue.anotherProperty)  // Hilangkan tanda `//` untuk melihat peringatan kesalahan
+```
+
+Walaupun variabel dari `protocolValue` sebenarnya memiliki tipe lain pada saat program dijalankan namun kompilator akan menganggap nilai ini sebagai tipe yang telah ditetapkan yaitu `ExampleProtocol`. Hal ini berarti bahwa anda tidak dapat mengakses metode atau properti yang diimplementasikan oleh kelas tersebut secara tidak sengaja selain yang selaras dengan protokolnya.
 
 ### Penanganan Kesalahan
 
+Cara merepresentasikan kesalahan adalah dapat menggunakan tipe apapun selama tipe tersebut mengadopsi protokol `Error`.
+
+```swift
+enum PrinterError: Error {
+    case outOfPaper
+    case noToner
+    case onFire
+}
+```
+
+Anda dapat menggunakan `throw` untuk melempar suatu kesalahan dan `throws` untuk memmberikan tanda bahwa sebuah fungsi dapat melemparkan suatu kesalahan. Jika suatu saat anda melemparkan sebuah kesalahan di dalam sebuah fungsi, maka fungsi tersebut akan langsung kembali dan kode kode yang memanggil fungsi tersebut yang kemudian akan menangani kesalahan yang terjadi.
+
+```swift
+func send(job: Int, toPrinter printerName: String) throws -> String {
+    if printerName == "Never Has Toner" {
+        throw PrinterError.noToner
+    }
+    return "Job sent"
+}
+```
+
+Ada banyak cara dalam pengananan kesalahan. Salah satu cara adalah dengan menggunakan sintaksis `do-catch`. Di dalam blok `do`, anda dapat menandai kode yang akan melempar kesalahan dengan cara membubuhkan `try` di depan pemanggilan fungsi tersebut. Kemudian di dalam blok `catch`, kesalahan tersebut akan secara otomatis dapat digunakan dengan nama "error" kecuali jika anda memberikan nama lain.
+
+```swift
+do {
+    let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+    print(printerResponse)
+} catch {
+    print(error)
+}
+// Mencetak "Job sent"
+```
+
+> **EKSPERIMEN**  
+> Gantilah nilai dari parameter `printerName` menjadi "Never Has Toner" sehingga fungsi `send(job:toPrinter:)` melemparkan sebuah kesalahan.
+
 ### Generik
+
+Penulisan sebuah nama di dalam suatu tanda kurung sudut akan membuat suatu fungsi atau tipe menjadi generik.
+
+```swift
+func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
+    var result = [Item]()
+    for _ in 0..<numberOfTimes {
+        result.append(item)
+    }
+    return result
+}
+makeArray(repeating: "knock", numberOfTimes: 4)
+```
+
+Anda dapat membuat generik dalam bentuk fungsi, metode, kelas, enumerasi, dan juga struktur.
+
+```swift
+// Implementasi ulang tipe opsional dari standar pustaka Swift
+enum OptionalValue<Wrapped> {
+    case none
+    case some(Wrapped)
+}
+var possibleInteger: OptionalValue<Int> = .none
+possibleInteger = .some(100)
+```
+
+Gunakan `where` tepat sebelum menulis isi dari fungsi untuk menjelaskan ketentuan-ketentuan yang diperlukan. Contohnya suatu ketentuan dimana suatu tipe harus mengimplementasikan sebuah protokol tertentu. Atau apabila anda ingin membuat suatu ketentuan dimana dua tipe harus sama, atau untuk membuat ketentuan dimana suatu kelase harus merupakan turunan dari kelas tertentu.
+
+```swift
+func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
+    where T.Element: Equatable, T.Element == U.Element
+{
+    for lhsItem in lhs {
+        for rhsItem in rhs {
+            if lhsItem == rhsItem {
+                return true
+            }
+        }
+    }
+    return false
+}
+anyCommonElements([1, 2, 3], [3])
+```
 
 ### Pemasangan Swift
 
