@@ -174,7 +174,11 @@ extension Node where Context == HTML.BodyContext {
                                     .href(context.sections[section].path),
                                     .text(context.sections[section].title)
                                 ))
-                            })
+                            },
+                            .li(.a(
+                                .href("https://github.com/supercomputra/BahasaPemrogramanSwift"),
+                                .text("Kontribusi")
+                            )))
                     )
                 )
             )
