@@ -7,6 +7,7 @@ Mohon diingat bahwa kami memiliki kode etik yang diharapkan dipatuhi oleh seluru
 # Proses _Pull Request_
 
 - Sertakan _issue_ yang berkaitan dengan _pull request_ yang dibuat. Apabila _issue_ yang dibuat merupakan issue terjemahan diharapkan untuk menyematkan rujukan tautan sumber dokumen asli.
+- Apabila bab atau subbab yang anda terjemahkan memiliki subbab yang belum diselesaikan, mohon utnuk menambahkan rujukan berupa tautan ke subbab pada dokumentasi asli.
 - Perbaharui berkas README.md dengan detil perubahan.
 - Anda hanya dapat melakukan _merge_ atau penyatuan apabila _pull request_ telah disetujui oleh pemilik repositori.
 - Apabila _pull request_ mengandung terjemahan, pastikan terjemahan bukan merupakan hasil terjamahan langsung dari layanan terjemahan otomatis berbasis mesin.
