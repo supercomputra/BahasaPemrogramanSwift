@@ -11,8 +11,6 @@ Diluncurkan pada tahun 2014, bahasa pemrograman Swift telah menjadi salah satu b
 
 Untuk kalangan pelajar atau mahasiswa, mempelajari Swift dapat mejadi pengenalan yang sangat baik untuk mengenali praktik-praktik yang baik dan konsep pemrograman yang moderen. Dan juga karena bahasa ini terbuka — sehingga semua orang dapat berkontribusi pada pengembangannya - kemampuan dalam memahami bahasa Swift ini bahkan juga dapat diterapkan pada _platform_ yang lebih luas, mulai dari perangkat _mobile_, _desktop_, dan juga pada teknologi komputasi awan.
 
-![Logo Swift](https://swift.org/assets/images/swift.svg)
-
 Swift adalah bahasa pemrograman yang serbaguna yang dibangun menggunakan sebuah pendekatan moderen terhadap keamanan, performa, dan _design patterns_ pada perangkat lunak.
 Tujuan dari proyek Swift ini dibuat adalah untuk memberikan bahasa pemrograman terbaik untuk digunakan mulai dari pemrograman sistem, aplikasi _mobile_, aplikasi _desktop_, hingga meningkatkan skalabilitas pada perangkat lunak berbasis komputasi awan. Dan yang lebih penting lagi, Swift dirancang untuk membuat sebuah penulisan dan perawatan sebuah program yang "benar" menjadi lebih mudah untuk para pengembang. Untuk mencapai tujuan ini, kami percaya bahwa cara terbaik untuk menulis dalam Swift juga harus sesuai dengan kriteria sebagai berikut:
 

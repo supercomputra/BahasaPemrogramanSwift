@@ -1,12 +1,5 @@
-//
-//  File.swift
-//  
-//
-//  Created by Zulwiyoza Putra on 04/10/20.
-//
-
 /**
- *  Publish Foundation theme
+ *  Main Foundation theme
  *  Copyright (c) Zulwiyoza Putra 2020
  *  MIT license, see LICENSE file for details
  */
@@ -43,7 +36,7 @@ small {
     color: #999;
 }
 
-article.content p {
+article.content p, li {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     line-height: 1.6em;
@@ -242,14 +235,64 @@ a {
 
 footer {
     color: #8a8a8a;
-    background-color: #f8f9fa;
+    background: #f8f9fa;
     font-size: 0.8em;
 }
+
+blockquote {
+    background: #eee;
+    margin: 16px 0 16px 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+main ul {
+    padding-left: 28px;
+    margin-top: 8px;
+    margin-bottom:8px;
+}
+
 
 footer .wrapper {
     display: flex;
     -webkit-flex-direction: column;
 }
+
+p > code:not(.language-swift) {
+    background: #ddd;
+    font-family: monospace;
+    padding: 1px 2px;
+    color: #000;
+    border-radius: 2px;
+}
+
+@media(max-width: 600px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+    
+    header > div.wrapper {
+        -webkit-flex-direction: column;
+    }
+    
+    header > div.wrapper > .social-links {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    p {
+        line-height: 1.6em;
+    }
+    
+    article.content h1 {
+        font-size: 2em;
+    }
+    
+    article.content p {
+        font-size: 1em;
+    }
+}
+
 
  /**
   *  Example CSS file that can be used to style Splash HTML output
@@ -259,7 +302,8 @@ footer .wrapper {
 
  pre {
      margin-bottom: 1.5em;
-     background-color: #1a1a1a;
+     margin-top: 1.5em;
+     background: #222;
      padding: 16px 0;
      border-radius: 16px;
  }

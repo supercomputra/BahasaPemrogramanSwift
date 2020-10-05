@@ -6,6 +6,8 @@ language: id
 #  Selamat Datang di Bahasa Pemrograman Swift
 [Daftar Isi](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/1)
 
+![Logo Swift](https://swift.org/assets/images/swift.svg)  
+
 Swift adalah salah satu bahasa pemrograman terbaik untuk menulis perangkat lunak terlepas dari apakah itu untuk perangkat _mobile_, _desktop_, _server_, atau _platform_ apapun selama itu menjalankan kode. Swift adalah sebuah bahasa pemrograman interaktif yang aman dan memiliki performa yang sangat cepat yang dikombinasikan dengan paradigma berpikir bahasa pemrograman moderen dengan menjunjung kaidah-kaidah dari kultur _engineering_ di Apple dan beragamnya kontribusi dari komunitas _open-source_. Kompilator Swift juga dioptimalkan demi mengutamakan performa sekaligus juga dioptimalkan untuk kemudahan dalam proses pengembangan perangkat lunak itu sendiri.
 
 Swift sangat mudah digunakan apabila anda adalah pemrogram yang masih baru. Bahasa pemrograman ini memiliki standar kualitas industri yang tidak hanya ekspresif tetapi juga gampang digunakan untuk aktifitas _scripting_. Dengan menulis kode Swift pada sebuah _Playground_ memudahkan anda untuk bereksperimen dengan melihat hasil dari kode yang anda tulis secara langsung tanpa menunggu lamanya proses perakitan oleh kompilator untuk sebuah aplikasi.

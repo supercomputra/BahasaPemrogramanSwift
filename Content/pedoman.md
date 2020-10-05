@@ -19,11 +19,11 @@ Swift juga mengenalkan tipe data opsional, dimana dapat membantu anda dalam mena
 
 Swift adalah bahasa yang memiliki tipe yang aman digunakan, dengan kata lain bahasa Swift itu sendiri dapat membantu anda untuk memahami lebih jelas tentang tipe tipa dari variabel-variabel yang anda gunakan pada kode anda. Jika kode anda membutuhkan suatu tipe data `String` maka Swift akan memastikan data yang diberikan bukanlah `Int` karena suatu kesalahan. Begitu juga Swift akan mencegah anda dengan tidak sengaja memberikan sebuah variabel dengan tipe data String yang opsional pada bagian kode anda yang membutuhkan data String yang bukan opsional. Fitur ini memudahkan anda dalam menemukan dan memperbaiki _error_ sedini mungkin pada saat anda melakukan pemrograman.
 
-#### Konstan dan Variabel
+### Konstan dan Variabel
 
 Konstan dan variabel dapat diasosiasikan dengans sebuah nama misalnya `maximumNumberOfLoginAttempts` atau `welcomeMessage` dengan nilai tertentu seperti angka `10` atau string `"Hello"`. Nilai dari sebuah konstan tidak dapat diubah ketika sudah ditetapkan dan variabel dapat diuabh ke nilai lain sewaktu-waktu.
 
-##### Deklarasi
+#### Deklarasi
 
 Konstan dan variable perlu dideklarasi terlebih dahulu sebelum digunakan. Anda dapat melakukan deklarasi dengan menggunakan kata kunci `let` dan untuk variable anda dapat menggunakan kata kunci `var`. Berikut adalah contoh bagaimana konstan dan variabel dapat digunakan untuk mengetahui jumlah upaya _login_ dari yang seorang pengguna terlah lakukan:
 
@@ -47,122 +47,122 @@ var x = 0.0, y = 0.0, z = 0.0
 > **CATATAN**
 > Jika nilai yang tersimpan dalam kode anda tidak akan berubah, selalu gunakan `let` untek mendeklaraskian sebuah nilai sebagai konstan. Gunakan variabel hanya untuk menyimpan nilai yang dapat berubah sewaktu-waktu.
 
-##### Tipe Anotasi
+#### Tipe Anotasi
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID312)
 
-##### Penamaan Konstan dan Variabel
+#### Penamaan Konstan dan Variabel
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID313)
 
-##### Pencetakan Konstan dan Variabel
+#### Pencetakan Konstan dan Variabel
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID314)
 
-#### Komentar
+### Komentar
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID315)
 
-#### Titik Koma
+### Titik Koma
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID316)
 
-#### Bilangan
+### Bilangan
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID317)
 
-##### Batas Bilangan
+#### Batas Bilangan
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID318)
 
-##### Int
+#### Int
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID319)
 
-##### UInt
+#### UInt
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID320)
 
-#### Bilangan Berkoma
+### Bilangan Berkoma
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID321)
 
-#### Pengamanan dan Inferensi Tipe
+### Pengamanan dan Inferensi Tipe
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID322)
 
-#### Literal Numerik
+### Literal Numerik
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID323)
 
-#### Pengonversian Tipe Numerik
+### Pengonversian Tipe Numerik
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID324)
 
-##### Pengonversian Tipe Bilangan Bulat
+#### Pengonversian Tipe Bilangan Bulat
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID325)
 
-##### Pengonversian Tipe Bilangan Bulat & Bilangan Berkoma
+#### Pengonversian Tipe Bilangan Bulat & Bilangan Berkoma
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID326)
 
-#### Pengaliasan Tipe
+### Pengaliasan Tipe
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID327)
 
-#### _Boolean_
+### _Boolean_
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID328)
 
-#### _Tuple_
+### _Tuple_
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID329)
 
-#### _Opsional_
+### _Opsional_
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID330)
 
-##### Kenihilan
+#### Kenihilan
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID331)
 
-##### Pernyataan Kondisional dan Pembukaan Nilai
+#### Pernyataan Kondisional dan Pembukaan Nilai
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID332)
 
-##### Pengikatan Nilai Opsional
+#### Pengikatan Nilai Opsional
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID333)
 
-##### Pernyataan Kondisional dan Pembukaan Nilai Implisit
+#### Pernyataan Kondisional dan Pembukaan Nilai Implisit
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID334)
 
-#### Asersi dan Prekondisi
+### Asersi dan Prekondisi
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID335)

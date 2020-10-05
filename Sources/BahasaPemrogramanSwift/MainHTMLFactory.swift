@@ -19,7 +19,13 @@ struct MainHTMLFactory<Site: Website>: HTMLFactory {
                 .header(for: context, selectedSection: nil),
                 .main(
                     .wrapper(
-                        .contentBody(index.content.body)
+                        .small(
+                            .text("Published on \(index.date) by Putra")
+                        ),
+                        .article(
+                            .class("content"),
+                            .contentBody(index.content.body)
+                        )
                     )
                 ),
                 
@@ -36,12 +42,16 @@ struct MainHTMLFactory<Site: Website>: HTMLFactory {
                 .header(for: context, selectedSection: section.id),
                 .main(
                     .wrapper(
-                        .h1(.text(section.title)),
-                        .contentBody(section.content.body),
+                        .small(
+                            .text("Published on \(section.date) by Putra")
+                        ),
+                        .article(
+                            .class("content"),
+                            .contentBody(section.content.body)
+                        ),
                         .itemList(for: section.items, on: context.site)
                     )
                 ),
-                
                 .footer(for: context)
             )
         )
@@ -65,7 +75,7 @@ struct MainHTMLFactory<Site: Website>: HTMLFactory {
                 .main(
                     .wrapper(
                         .small(
-                            .text("Published on \(formatter.string(from: item.date)) by Putra")
+                            .text("Published on \(item.date) by Putra")
                         ),
                         .article(
                             .class("content"),
@@ -84,7 +94,17 @@ struct MainHTMLFactory<Site: Website>: HTMLFactory {
             .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
-                .wrapper(.contentBody(page.body)),
+                .main(
+                    .wrapper(
+                        .small(
+                            .text("Published on \(page.date) by Putra")
+                        ),
+                        .article(
+                            .class("content"),
+                            .contentBody(page.body)
+                        )
+                    )
+                ),
                 .footer(for: context)
             )
         )
