@@ -11,7 +11,7 @@ Swift adalah sebuah bahasa pemrograman baru untuk pengembangan aplikasi iOS, wat
 
 Swift memberikan versinya sendiri dari seluruh tipe-tipe data yang fundamental yang ada pada bahasa C dan Objective-C, termasuk didalamnya `Int` untuk bilangan bulat, `Double` dan `Float` untuk bilangan berkoma, `Bool` untuk nilai kebenaran, dan `String` untuk data yang bersifat tekstual. Tidak hanya itu, Swift juga memberikan versi yang lebih baik dari tiga elemen utama pada tipe data koleksi, `Array`, `Set`, dan `Dictionary`, sebagaimana dijelaskan pada bagian Collection Types.
 
-Sebagaimana pada bahasa pemrograman C, Swift benyak menggunakan variabel-variabel untuk menyimpan dan membuat referensi dengan cara memberikan nama pada setiap nilai. Swift juga membuat pengguanan yang lebih luas terhadap variabel-variabel yang tidak dapat diubah. Variabel-variabel ini disebut dengan konstan, dan jauh lebih baik daripada konstan yang ada pada C. Konstan-konstan digunakan dalam Swift untuk membuat kode lebih aman dan lebih jelas dalam aspek tujuan penggunaannya ketika anda bekerja menggunakan nilai-nilai yang tidak butuh diubah sewaktu-waktu.
+Sebagaimana pada bahasa pemrograman C, Swift benyak menggunakan variabel-variabel untuk menyimpan dan membuat referensi dengan cara memberikan nama pada setiap nilai. Swift juga membuat pengguanan yang lebih luas terhadap variabel-variabel yang tidak dapat diubah. Variabel-variabel ini disebut dengan konstanta, dan jauh lebih baik daripada konstanta yang ada pada C. Konstanta digunakan dalam Swift untuk membuat kode lebih aman dan lebih jelas dalam aspek tujuan penggunaannya ketika anda bekerja menggunakan nilai-nilai yang tidak butuh diubah sewaktu-waktu.
 
 Sebagai tambahan dari tipe data yang mirip dengan C, Swift mengusung sebuah tipe data lanjut yang tidak ditemukan pada bahasa Objective-C, seperti _Tuple_. _Tuple_ memudahkan anda dalam membuat suatu pengelompokan pada nilai-nilai. Anda dapat menggunakan sebuah _tuple_ untuk mengembalikan beberapa nilai dari sebuah fungsi sebagai satu nilai.
 
@@ -19,9 +19,9 @@ Swift juga mengenalkan tipe data opsional, dimana dapat membantu anda dalam mena
 
 Swift adalah bahasa yang memiliki tipe yang aman digunakan, dengan kata lain bahasa Swift itu sendiri dapat membantu anda untuk memahami lebih jelas tentang tipe tipa dari variabel-variabel yang anda gunakan pada kode anda. Jika kode anda membutuhkan suatu tipe data `String` maka Swift akan memastikan data yang diberikan bukanlah `Int` karena suatu kesalahan. Begitu juga Swift akan mencegah anda dengan tidak sengaja memberikan sebuah variabel dengan tipe data String yang opsional pada bagian kode anda yang membutuhkan data String yang bukan opsional. Fitur ini memudahkan anda dalam menemukan dan memperbaiki _error_ sedini mungkin pada saat anda melakukan pemrograman.
 
-### Konstan dan Variabel
+### Konstanta dan Variabel
 
-Konstan dan variabel dapat diasosiasikan dengans sebuah nama misalnya `maximumNumberOfLoginAttempts` atau `welcomeMessage` dengan nilai tertentu seperti angka `10` atau string `"Hello"`. Nilai dari sebuah konstan tidak dapat diubah ketika sudah ditetapkan dan variabel dapat diuabh ke nilai lain sewaktu-waktu.
+Konstanta dan variabel dapat diasosiasikan dengans sebuah nama misalnya `maximumNumberOfLoginAttempts` atau `welcomeMessage` dengan nilai tertentu seperti angka `10` atau string `"Hello"`. Nilai dari sebuah konstan tidak dapat diubah ketika sudah ditetapkan dan variabel dapat diuabh ke nilai lain sewaktu-waktu.
 
 #### Deklarasi
 
@@ -47,17 +47,43 @@ var x = 0.0, y = 0.0, z = 0.0
 > **CATATAN**
 > Jika nilai yang tersimpan dalam kode anda tidak akan berubah, selalu gunakan `let` untek mendeklaraskian sebuah nilai sebagai konstan. Gunakan variabel hanya untuk menyimpan nilai yang dapat berubah sewaktu-waktu.
 
-#### Tipe Anotasi
+#### Anotasi Tipe Data
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID312)
+Anda dapat menyertakan anotasi tipe data ketika mendeklarasikan sebuah konstanta atau variabel untuk menjelaskan jenis isian nilai yang dapat ditampung di konstanta atau variabel tersebut. Cara menuliskan anotasi adalah dengan menuliskan titik dua (`:`) di belakang nama konstanta atau variabel, diikuti spasi, kemudian diikuti dengan jenis tipe data yang dimaksud.
 
-#### Penamaan Konstan dan Variabel
+Baris kode berikut mencontohkan pemberian anotasi tipe ke variabel bernama `welcomeMessage` dan menyatakan bahwa variabel tersebut dapat menyimpan nilai bertipe `String`.
+
+```swift
+var welcomeMessage: String
+```
+
+Tanda titik dua pada deklarasi di atas dapat diartikan sebagai "... dapat diisi dengan tipe data...", maka kode di atas dapat dibahasakan menjadi:
+
+"Deklarasikan variabel dengan nama `welcomeMessage` yang dapat diisi dengan tipe data `String`."
+
+Dari pembahasaan kalimat tadi, dapat dimengerti bahwa variabel tersebut dapat menyimpan nilai apapun selama memiliki tipe data `String`. Anotasi ini menyatakan jenis tipe data yang dapat ditampung.
+
+Variabel `welcomeMessage` tersebut kini dapat diberi nilai bertipe `String` tanpa memunculkan _error_.
+
+```swift
+welcomeMessage = "Hello"
+```
+
+Anda dapat mendefinisikan beberapa variabel dengan tipe data yang sama dalam satu baris saja. Tiap variabel dipisahkan oleh tanda koma, diikuti dengan anotasi tipe data setelah variabel terakhir.
+
+```swift
+var red, green, blue: Double
+```
+
+> **CATATAN**
+> Dalam prakteknya, penulisan anotasi tipe data akan jarang Anda butuhkan. Apabila Anda menyediakan nilai awal untuk sebuah konstanta atau variabel, Swift dapat menentukan tipe data untuk konstanta atau variabel tersebut dari isian nilai awal yang Anda berikan sesuai dengan yang tertulis di _Type Safety_ dan _Type Inference_. Pada contoh `welcomeMessage` di atas, tidak ada nilai awal yang diberikan sehingga tipe data dari variabel `welcomeMessage` ditentukan dari anotasi dan tidak ditentukan dari nilai awalnya.
+
+#### Penamaan Konstanta dan Variabel
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID313)
 
-#### Pencetakan Konstan dan Variabel
+#### Pencetakan Konstanta dan Variabel
 
 [[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID314)
