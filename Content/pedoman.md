@@ -96,7 +96,7 @@ Fungsi `print(_:separator:terminator:)` tersebut adalah fungsi global yang mence
 Swift dapat mencetak nilai dari konstanta atau variabel pada sebuah kalimat atau _string_ yang panjang menggunakan _string interpolation_. Untuk menginstruksikan Swift supaya menampilkan nilai konstanta atau variabel, sertakan nama konstanta atau variabel di dalam tanda kurung dan berikan garis miring terbalik (`\`) sebelum tanda buka kurung. 
 
 ```swift
-print("Nilai yang terkandung dalam friendlyWelcome adalah /\(friendlyWelcome)")  
+print("Nilai yang terkandung dalam friendlyWelcome adalah \(friendlyWelcome)")  
 // Mencetak "Nilai yang terkandung dalam friendlyWelcome adalah Bonjour!"
 ```
 > **CATATAN**
@@ -132,20 +132,20 @@ Komentar _multiline_ yang berlapis ini dapat digunakan untuk menjadikan sekumpul
 
 ### Titik Koma
 
-Berbeda dengan bahasa pemrograman lain, Swift tidak mewajibkan Anda untuk mengakhiri setiap baris kode dengan titik koma (`;`), namun Anda tetap boleh melakukannya. Namun titik koma akan diperlukan apabila Anda menuliskan banyak pernyataan sekaligus dalam satu baris.
+Berbeda dengan bahasa pemrograman lain, Swift tidak mewajibkan Anda untuk mengakhiri setiap baris kode dengan titik koma (`;`) namun Anda tetap boleh melakukannya. Namun titik koma akan diperlukan apabila Anda menuliskan banyak pernyataan sekaligus dalam satu baris.
 
 ```swift
 let cat = "🐱"; print(cat)
-// Prints "🐱"
+// Mencetak "🐱"
 ```
 
-### _Integers_ 
+### _Integer_ 
 
-_Integers_ adalah bilangan bulat (bilangan yang tidak mengandung nilai desimal) seperti misalnya 42 atau -23. _Integers_ dapat memiliki format _signed_ (bilangan positif, nol, atau bilangan negatif) atau _unsigned_ (bilangan positif atau nol).
+_Integer_ adalah bilangan bulat (bilangan yang tidak mengandung nilai desimal) seperti misalnya 42 atau -23. _Integer_ dapat memiliki format _signed_ (bilangan positif, nol, atau bilangan negatif) atau _unsigned_ (bilangan positif atau nol).
 
-Swift menyediakan _integers_ baik dalam format _signed_ ataupun _unsigned_ dalam bentuk 8, 16, 32, dan 64bit. Format-format _integer_ tersebut mengikuti aturan penamaan yang sama dengan C, misalnya 8-bit _unsigned integer_ dinyatakan dalam tipe data `UInt8` dan 32-bit _unsigned integer_ dinyatakan dalam tipe data `Int32`. Layaknya tipe data lain di Swift, tipe-tipe data _integer_ tersebut diawali dengan huruf kapital.
+Swift menyediakan _integer_ baik dalam format _signed_ ataupun _unsigned_ dalam bentuk 8, 16, 32, dan 64-bit. Format-format _integer_ tersebut mengikuti aturan penamaan yang sama dengan C, misalnya 8-bit _unsigned integer_ dinyatakan dalam tipe data `UInt8` dan 32-bit _unsigned integer_ dinyatakan dalam tipe data `Int32`. Layaknya tipe data lain di Swift, tipe-tipe data _integer_ tersebut diawali dengan huruf kapital.
 
-#### Batas _Integer_
+#### Batas Nilai _Integer_
 Anda dapat mengakses batas minimal dan maksimal dari setiap tipe _integer_ menggunakan properti _min_ dan _max_:
 
 ```swift
