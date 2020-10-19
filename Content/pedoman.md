@@ -84,39 +84,92 @@ var red, green, blue: Double
 [[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID313)
 
 #### Pencetakan Konstanta dan Variabel
+Anda dapat mencetak isi nilai dari sebuah konstanta atau variabel menggunakan fungsi `print(_:separator:terminator:)`.
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID314)
+```swift
+print(friendlyWelcome)  
+// Prints "Bonjour!"
+```
+
+Fungsi `print(_:separator:terminator:)` tersebut adalah fungsi global yang mencetak satu nilai atau lebih dengan keluaran yang sesuai. Pada Xcode, fungsi `print(_:separator:terminator:)` mencetak keluarannya pada daerah _"console"_ Xcode. Masing-masing dari parameter `separator` dan `terminator` memiliki nilai _default_, sehingga Anda dapat tidak menyertakan parameter-parameter tersebut ketika menjalankan fungsi ini. Secara _default_, fungsi ini mengakhiri baris pencetakannya dengan memberikan jeda baris. Untuk mencetak sebuah nilai tanpa diakhiri jeda baris, isikan _string_ kosong pada parameter `terminator` — misalnya `print(someValue, terminator: "")`. Untuk informasi lebih lanjut mengenai parameter dengan nilai _default_, lihat bagian _Default Parameter Values_.
+
+Swift dapat mencetak nilai dari konstanta atau variabel pada sebuah kalimat atau _string_ yang panjang menggunakan _string interpolation_. Untuk menginstruksikan Swift supaya menampilkan nilai konstanta atau variabel, sertakan nama konstanta atau variabel di dalam tanda kurung dan berikan garis miring terbalik (`\`) sebelum tanda buka kurung. 
+
+```swift
+print("Nilai yang terkandung dalam friendlyWelcome adalah /\(friendlyWelcome)")  
+// Mencetak "Nilai yang terkandung dalam friendlyWelcome adalah Bonjour!"
+```
+> **CATATAN**
+> Panduan ragam cara penggunaan _string interpolation_ dapat ditemukan di bagian _String Interpolation._
+
 
 ### Komentar
+Komentar dapat digunakan untuk menambahkan tulisan yang tidak dieksekusi pada kode Anda sebagai catatan atau pengingat untuk diri sendiri. Komentar akan diabaikan oleh _compiler_ Swift.
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID315)
+Komentar pada Swift sangat mirip dengan komentar pada C. Komentar yang hanya memiliki satu baris diawali dengan dua garis miring (`//`):
+
+```swift
+// Ini adalah baris komentar
+```
+
+Komentar _multiline_ (mengandung lebih dari satu baris) diawali dengan garis miring yang diikuti dengan tanda bintang (`/*`) dan diakhiri dengan tanda bintang yang diikuti dengan garis miring (`*/`):
+
+```swift
+/* Ini juga merupakan sebuah komentar
+yang ditulis dalam lebih dari satu baris. */
+```
+
+Berbeda dengan komentar _multiline_ pada C, komentar _multiline_ pada Swift dapat dimasukkan ke dalam komentar _multiline_ lainnya. Anda dapat menulis komentar dalam komentar dengan membuka blok komentar _multiline_ dan kemudian membuka blok baru komentar _multiline_ pada baris selanjutnya. Blok kedua tersebut harus diakhiri sebelum mengakhiri blok komentar pertama.
+
+```swift
+/* Ini adalah blok komentar multiline pertama
+ /* Ini adalah blok komentar kedua di dalam blok pertama */
+Ini adalah baris terakhir blok komentar pertama */
+```
+
+Komentar _multiline_ yang berlapis ini dapat digunakan untuk menjadikan sekumpulan baris kode menjadi komentar (supaya tidak dieksekusi) bahkan ketika kode tersebut sudah mengandung komentar _multiline_.
+
 
 ### Titik Koma
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID316)
+Berbeda dengan bahasa pemrograman lain, Swift tidak mewajibkan Anda untuk mengakhiri setiap baris kode dengan titik koma (`;`), namun Anda tetap boleh melakukannya. Namun titik koma akan diperlukan apabila Anda menuliskan banyak pernyataan sekaligus dalam satu baris.
 
-### Bilangan
+```swift
+let cat = "🐱"; print(cat)
+// Prints "🐱"
+```
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID317)
+### _Integers_ 
 
-#### Batas Bilangan
+_Integers_ adalah bilangan bulat (bilangan yang tidak mengandung nilai desimal) seperti misalnya 42 atau -23. _Integers_ dapat memiliki format _signed_ (bilangan positif, nol, atau bilangan negatif) atau _unsigned_ (bilangan positif atau nol).
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID318)
+Swift menyediakan _integers_ baik dalam format _signed_ ataupun _unsigned_ dalam bentuk 8, 16, 32, dan 64bit. Format-format _integer_ tersebut mengikuti aturan penamaan yang sama dengan C, misalnya 8-bit _unsigned integer_ dinyatakan dalam tipe data `UInt8` dan 32-bit _unsigned integer_ dinyatakan dalam tipe data `Int32`. Layaknya tipe data lain di Swift, tipe-tipe data _integer_ tersebut diawali dengan huruf kapital.
 
-#### Int
+#### Batas _Integer_
+Anda dapat mengakses batas minimal dan maksimal dari setiap tipe _integer_ menggunakan properti _min_ dan _max_:
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID319)
+```swift
+let minValue = UInt8.min  // minValue adalah 0 dan memiliki tipe UInt8
+let maxValue = UInt8.max  // maxValue adalah 255 dan memiliki tipe UInt8
+```
 
-#### UInt
+Nilai dari properti-properti tersebut sesuai dalam batasan tipe yang dimaksudkan dan dapat digunakan bersamaan dengan nilai lain dengan tipe yang sama.
 
-[[dibutuhkan penerjemahan]](https://github.com/supercomputra/pedoman-dasar-bahasa-pemrograman-swift/issues/new)
-[[dokumen rujukan]](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID320)
+#### `Int`
+Dalam banyak kasus, Anda tidak perlu menentukan tipe data ukuran _integer_ yang spesifik pada kode Anda. Swift menyediakan tipe _integer_ lain, yaitu `Int`, yang ukurannya menyesuaikan dengan _platform_ yang sedang digunakan.
+
+- Pada _platform_ 32-bit, `Int` memiliki ukuran yang sama seperti `Int32`.
+- Pada _platform_ 64-bit, `Int` memiliki ukuran yang sama seperti `Int64`.
+
+Selain ketika Anda sangat perlu menggunakan ukuran spesifik dari sebuah _integer_, selalu gunakan `Int` untuk nilai `integer` pada kode Anda. Hal ini dimaksudkan untuk menjaga konsistensi dan interoperabilitas dari sebuah kode. Bahkan di _platform_ 32-bit, `Int` dapat menyimpan nilai dari `-2,147,483,648` hingga `2,147,483,647` yang cukup besar untuk sebuah rentang angka.
+
+#### `UInt`
+Swift juga menyediakan tipe data _unsigned integer_, yaitu `UInt`, yang memiliki ukuran yang menyesuaikan dengan _platform_ yang sedang digunakan.
+- Pada _platform_ 32-bit, `UInt` memiliki ukuran yang sama seperti `UInt32`.
+- Pada _platform_ 64-bit, `UInt` memiliki ukuran yang sama seperti `UInt64`.
+
+> **CATATAN**
+> Harap gunakan `UInt` hanya ketika Anda secara spesifik membutuhkan tipe _unsigned integer_ yang memiliki ukuran yang sesuai dengan _platform_ yang sedang digunakan. Jika tidak, sangat disarankan untuk menggunakan `Int`, bahkan ketika nilai yang dibutuhkan adalah bilangan non-negatif. Penggunaan `Int` yang konsisten akan sangat membantu interoperabilitas kode, mengurangi perubahan tipe antar tipe bilangan, dan sesuai dengan inferensi tipe _integer_, seperti yang telah tertulis di bagian _Type Safety and Type Inference._
 
 ### Bilangan Berkoma
 
