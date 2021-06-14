@@ -4,7 +4,7 @@ Terjemahan bahasa Indonesia dari tutorial resmi Apple "The Swift Programming Lan
 [Dokumen Asli](https://docs.swift.org/swift-book/)
 
 ## Menjalankan Program
-Program ini debuat dengan menggunakan pustaka `Publish`. Anda dapat memasang `publish` _command_ pada komputer anda dengan cara:
+Program ini debuat dengan menggunakan pustaka `Publish`. Anda dapat memasang perintah `publish` pada komputer anda dengan cara:
 ```
 $ git clone https://github.com/JohnSundell/Publish.git
 $ cd Publish
